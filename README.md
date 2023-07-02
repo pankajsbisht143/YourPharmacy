@@ -1,4 +1,4 @@
-# pharamaWebsite
+# YourPharmacy
 
 Login/SignUp -Ashish,     
 HomePage-Pankaj,  
