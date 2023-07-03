@@ -1,11 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to YourPharmacy</title>
+    <title>Document</title>
+    <style>
+        body {
+            /* width: 100%; */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* navbar start */
+        #navbar1 {
+            /* width: 100%; */
+            display: flex;
+            gap: 50px;
+        }
+        
+        nav {
+            /* width: 100%; */
+            /* position: fixed; */
+            display: flex;
+            justify-content: space-between;
+            /* gap: 230px; */
+            align-items: center;
+            padding: 0px 15px 0px 15px;
+            /* border: 2px solid red; */
+        }
+
+        #navbar1>div>a>img {
+            width: 80px;
+            height: 60px;
+        }
+
+        #nav1e {
+            /* width: 100%; */
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        #nav1e>a{
+            text-decoration: none;
+            color: rgb(0, 81, 92);
+        }
+        #menubar {
+            display: none;
+        }
+
+        #consultDiv {
+            width: 23%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            /* border: 1px solid red; */
+            padding-right: 15px;
+
+        }
+        #consultDiv p {
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+        }
+
+        header {
+            
+            position: relative;
+            
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            top: 0%;
+            padding-right: 25px;
+            background-color: white;
+        }
+        #consultDiv>a {
+            text-decoration: none;
+            color: rgb(0, 81, 92);
+            font-size: bold;
+        }
+        #Search {
+            width: 200px;
+            height: 30px;
+
+        }
+        #navbar1>div span{
+            display: flex;
+        }
+        #navbar1>div span button {
+            margin-left: -5px;
+            padding: 8.3px;
+            border-radius: 0 7px 7px 0;
+            background-color: rgb(0, 81, 92);
+            color: white;
+            font-weight: bold;
+            border: 1px solid rgb(0, 81, 92);
+        }
+
+        #navbar1>div span input {
+            border-radius: 7px 0px 0px 7px;
+            border: 1px solid rgb(0, 81, 92);
+        }
+
+        #Consult {
+            width: 150px;
+            height: 40px;
+            /* border-radius: 8px; */
+            padding: 10px;
+            border: none;
+            background-color: rgb(0, 81, 92);
+            color: white;
+        }
+        #menunavbar {
+            display: none;
+        }
+
+        /* navbar close  */
+
+
+        #template {
+            width: 100%;
+            height: 90vh;
+            margin: auto;
+            background-image: url("https://daryo.uz/static/pills.webp");
+            /* background-size: 100%; */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        
+
+
+        .overlay-text {
+            width: 30%;
+            font-size: 70px;
+
+            padding: 20px;
+            margin-left: 80px;
+            /* margin-top: 80px; */
+        }
+        #smallpara {
+            margin-top: -60px;
+            font-size: 30px;
+        }
+
+        #moreabout {
+            height: 50px;
+            padding: 10px;
+            color: rgb(0, 81, 92);
+            border-color: 1px solid rgb(7, 60, 67);
+        }
+
+        .Content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .best {
+            font-size: 30px;
+            color: rgb(0, 81, 92);
+        }
+
+        .Content>h1 {
+            font-size: 50px;
+            margin-top: -20px;
+        }
+
+        .Content>h1+p {
+            width: 50%;
+            font-size: 18px;
+            margin: auto;
+            margin-top: -20px;
+
+        }
+        #Details{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin: auto;
+            margin-top: 50px;
+           
+            padding: 20px;
+            text-align: center;
+        }
+        #Details>div img{
+            width: 100%;
+            height: 50vh;
+           
+        }
+        #Details>div>p{
+            font-size: 25px;
+        }
+        #Details>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 20px;
+        }
+        @media screen and (min-width:767px) and (max-width:1023px) {
+            /* navbar start */
+            nav{
+                width: 100%;
+                position: fixed;
+            }
+            #nav1e{
+                width: 100%;
+                display: none;
+            }
+            #consultDiv {
+            display: none;
+            }
+            #menubar{
+                display: block;
+                /* border: 1px solid green; */
+                /* margin-right: 20px; */
+                margin-right:25px ;
+            }
+            #menubar p{
+                font-size: 30px;
+            }
+            /* nav{
+                border:  4px solid yellow;
+            } */
+            section{
+                position: relative;
+            }
+            #menunavbar {
+                width: 100%;
+                display: none;
+                position:fixed;
+                /* right: 0; */
+                top: 6%;
+                height: 90vh;
+                background-color: white;
+            }
+            #menunavbar>div{
+                display: flex;
+                flex-direction:column;
+                text-align: center;
+            }
+           #menunavbar>div>a{
+            text-decoration: none;
+            color: rgb(0, 81, 92);
+            font-size: bold;
+           }
+           #menunavbar>div button{
+            width: 12rem;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            border: 1px solid rgb(0, 81, 92);
+            background-color: rgb(0, 81, 92);
+            text-align: center;
+            margin: auto;
+           }
+            
+           #menunavbar>div a p{
+            font-size: 25px;
+            font-weight: bold;
+           }
+           #close{
+            font-size: 30px;
+        }
+           /* navbar end */
+
+
+
+
+
+
+           #template {
+            width: 100%;
+            /* position: absolute; */
+            height: 30vh;
+            margin: auto;
+            background-image: url("https://daryo.uz/static/pills.webp");
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            margin-top: 8%;
+            
+            
+        }
+        .overlay-text {
+            width: 30%;
+            font-size: 25px;
+
+            padding: 20px;
+            margin-left: 80px;
+            /* margin-top: 80px; */
+        }
+        #smallpara {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        #moreabout {
+            width: fit-content;
+            height: 40px;
+            overflow-wrap: break-word;
+            padding: 10px;
+            color: rgb(0, 81, 92);
+            border-color: 1px solid rgb(7, 60, 67);
+        }
+
+        .Content {
+            text-align: center;
+            /* margin-top: 50px; */
+        }
+
+        .best {
+            font-size: 25px;
+            color: rgb(0, 81, 92);
+        }
+
+        .Content>h1 {
+            font-size: 35px;
+            /* margin-top: -20px; */
+        }
+
+        .Content>h1+p {
+            /* width: 50%; */
+            font-size: 20px;
+            margin: auto;
+            /* margin-top: -20px; */
+
+        }
+        #Details{
+            grid-template-columns: repeat(2,1fr);
+        }
+        #Details>div img{
+            width: 100%;
+            height: 30vh;
+           
+        }
+        }
+
+        @media screen and (min-width:0px) and (max-width:766px) {
+            /* nav{
+                position: fixed;
+            } */
+            /* navbar start */
+            nav{
+                width: 100%;
+                position: fixed;
+            }
+            #nav1e{
+                display: none;
+            }
+            #consultDiv {
+            display: none;
+            }
+            #menubar{
+                display: block;
+                /* border: 1px solid green; */
+                margin-right: 20px;
+            }
+            #menubar p{
+                font-size: 30px;
+            }
+            /* nav{
+                border:  4px solid yellow;
+            } */
+            section{
+                position: relative;
+            }
+            #menunavbar {
+                width: 100%;
+                display: none;
+                position:fixed;
+                right: 0;
+                top: 8%;
+                height: 90vh;
+                background-color: white;
+            }
+            #menunavbar>div{
+                display: flex;
+                flex-direction:column;
+                text-align: center;
+            }
+           #menunavbar>div>a{
+            text-decoration: none;
+            color: rgb(0, 81, 92);
+            font-size: bold;
+           }
+           #menunavbar>div button{
+            width: 12rem;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            border: 1px solid rgb(0, 81, 92);
+            background-color: rgb(0, 81, 92);
+            text-align: center;
+            margin: auto;
+           }
+            
+           #menunavbar>div a p{
+            font-size: 20px;
+            font-weight: bold;
+           }
+           #close{
+            font-size: 30px;
+        }
+           /* navbar end */
+
+
+
+
+
+
+
+           #template {
+            width: 100%;
+            height: 40vh;
+            margin: auto;
+            margin-top: 20%;
+            background-image: url("https://daryo.uz/static/pills.webp");
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            
+            
+        }
+        .overlay-text {
+            width: 35%;
+            font-size: 20px;
+
+            padding: 20px;
+            margin-left: 80px;
+            /* margin-top: 80px; */
+        }
+        #smallpara {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        #moreabout {
+            /* width: fit-content; */
+            height: 30px;
+            /* overflow-wrap: break-word; */
+            padding: 10px;
+            color: rgb(0, 81, 92);
+            border-color: 1px solid rgb(7, 60, 67);
+            font-size: 10px;
+        }
+
+        .Content {
+            text-align: center;
+            /* margin-top: 50px; */
+        }
+
+        .best {
+            font-size: 15px;
+            color: rgb(0, 81, 92);
+        }
+
+        .Content>h1 {
+            font-size: 20px;
+            /* margin-top: -20px; */
+        }
+
+        .Content>h1+p {
+            /* width: 50%; */
+            font-size: 10px;
+            margin: auto;
+            /* margin-top: -20px; */
+
+        }
+        
+        #Details{
+            grid-template-columns: repeat(1,1fr);
+        }
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <div id="navbar">
+       
+    </div>
+    <div id="template">
+        <!-- <img src="https://wallpaperaccess.com/full/1621379.jpg" alt=""> -->
+        <div class="overlay-text">
+            <p>The place where your health matters most.</p>
+            <p id="smallpara">Health better start here.</p>
+            <button id="moreabout">MORE ABOUT US</button>
+        </div>
+    </div>
+    <div class="Content">
+        <p class="best">Best-in-class</p>
+        <h1>Healthcare Services</h1>
+        <p>Health care, or healthcare, is the improvement of health via the prevention, diagnosis, treatment,
+            amelioration or cure of disease, illness, injury, and other physical and mental impairments in people.
+        </p>
+    </div>
+    <div id="Details">
+        <div>
+            <img src="https://png.pngtree.com/png-vector/20220518/ourmid/pngtree-telemedicine-medicine-internet-online-consultation-png-image_4645191.png" alt="online consultation">
+            <p>Online Consultation</p>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1300273646/vector/hospital-icon-design-vector-illustration-template.jpg?s=612x612&w=0&k=20&c=D3tyyURUrIL5b2jpNCEMcQNz57oF5mSlkLzPEfYagSo=" alt="">
+            <p>Hospital</p>
+        </div>
+        <div>
+            <img src="https://thumbs.dreamstime.com/b/syringe-vaccine-bottle-flat-design-vector-blue-tone-182754395.jpg" alt="">
+            <p>Medicines</p>
+        </div>
+        <div>
+            <img src="https://thumbs.dreamstime.com/b/blood-test-icon-vector-medical-equipment-graphic-design-logo-web-site-social-media-mobile-app-ui-illustration-blood-test-icon-216213721.jpg" alt="">
+            <p>Pathology Tests</p>
+        </div>
+        <div>
+            <img src="https://cdn.vectorstock.com/i/preview-1x/64/22/nurse-icon-vector-5076422.webp" alt="">
+            <p>Nursing</p>
+        </div>
+        <div>
+            <img src="https://3.imimg.com/data3/UC/PC/MY-9041239/24-hrs-emergency-250x250.jpg" alt="">
+            <p>Emergency</p>
+        </div>
+    </div>
 </body>
+
 </html>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./script/index.js" type="module">
+   
+</script>
