@@ -1,0 +1,28 @@
+body{
+    background-image: url('https://daryo.uz/static/pills.webp');
+}
+form{
+    height: 500px;
+    width: 400px;
+    background-color: black;
+    box-shadow: 0 0px 10px black;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 2%;
+}
+label{
+    color: white;
+}
+form>div{
+    display: flex;
+    flex-direction: column;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/signin.css">
+  </head>
+  <body>
+    <form action="">
+      <button id="logout" style="display: none;">Logout</button>
+      <div>
+        <label for="">Emailid</label>
+        <input id="mailid" type="text" placeholder="enter your mail id" />
+      </div>
+      <div>
+        <label for="">Password</label>
+        <input id="password" type="text" placeholder="enter your password" />
+      </div>
+      <button type="button" id="login">Login</button>
+      <h2>Or</h2>
+      <div>
+      <button id="google"><img style="height: auto;width: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/882px-Google_%22G%22_Logo.svg.png?20230305195327" alt="">
+      </button>
+    </form>
+    
+</div>
+</body>
+</html>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+    GoogleAuthProvider,
+    signInWithPopup
+  } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDfTvxwRCZTEIlAvLRa2_WxFcQvn1NPXHQ",
+    authDomain: "auth-5f551.firebaseapp.com",
+    projectId: "auth-5f551",
+    storageBucket: "auth-5f551.appspot.com",
+    messagingSenderId: "1094224469393",
+    appId: "1:1094224469393:web:ad7568e77bb8a88286ce30",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+
+  document.querySelector("#login").addEventListener("click", () => {
+    let email = document.querySelector("#mailid").value;
+    let password = document.querySelector("#password").value;
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        alert("Login Successfully");
+        document.querySelector("#logout").style.display="block";
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      alert("You entered the wrong email id or password");
+    });
+  });
+
+  document.querySelector("#logout").addEventListener("click",()=>{
+
+      signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          alert("Logout Successfully");
+        })
+        .catch((error) => {
+          // An error happened.
+        });
+  })
+
+  const provider = new GoogleAuthProvider();
+document.querySelector("#google").addEventListener("click",()=>{
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    document.querySelector("#logout").style.display="block";
+    document.querySelector("#logout").innerText=`Logout ${user.displayName}`
+    alert("Signup Successfully");
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+})
+
+document.querySelector("#login").addEventListener("click",()=>{
+
+})
+</script>

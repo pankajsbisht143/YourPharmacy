@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../styles/signup.css">
+  </head>
+  <body>
+      <form action="">
+        <div>
+          <label for="">User</label>
+          <input id="username" type="text" placeholder="Enter Your username" />
+        </div>
+        <div>
+          <label for="">EmailId</label>
+          <input id="mailid" type="text" placeholder="Enter Your Mail Id" />
+        </div>
+        <div>
+          <label for="">PhoneNo</label>
+          <input id="phoneno" type="text" placeholder="Enter Your phone No" />
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input autocomplete="on" id="password" type="text" placeholder="Enter" />
+        </div>
+        <button type="button" id="btn">Signup</button>
+      </form>
+  </body>
 </html>
-<script>
-    console.log("Hello");
+<script type="module" src="../script/signup.js">
 </script>
