@@ -4,6 +4,23 @@
     margin: auto;
 }
 
+#P_Filter{
+ padding: 10px;
+}
+
+#Top img{
+    width: 100%;
+}
+
+#Top{
+  /* border: 2px solid purple; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px 0px 0px;
+  margin-bottom: 50px;
+}
+
 #Recm p{
     font-size: 25px;
 }
@@ -25,28 +42,32 @@
     padding: 20px;
 }
 
-#Main_Container #Left_side{
-    /* border: 1px solid; */
+#Left_side{
     background: #f5f5f5;
-    height: 700px;
+    height: 900px;
 }
 
-
-#Main_Container #Left_side>div{
-    padding:0px 20px;
-    align-items: baseline;
+/* <------------------- Style for Filter Product--------------------> */
+.opt{
     display: flex;
+     align-items: center;
     justify-content: space-between;
+    padding:0px 20px;
+    /* border-bottom: 1px solid; */
 }
 
-#Main_Container #Left_side>div p{
-    padding-right:20px ;
+#Filter{
+    border-bottom: 2px solid rgb(215, 213, 211);
+    
 }
 
-/* #Main_Container #Right_side{
-    border: 1px solid blue;
-} */
+.opt p{
+    padding-right:30px ;
+}
 
+/* <-------------------- */
+
+/* <------------------------ Style For Product Div---------------> */
 #Right_side{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -54,9 +75,55 @@
     margin-left: 15px;
 }
 
-#Right_side>div{
+/* <-------------- */
+@media only screen and (max-width: 950px) {
+    #Right_side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    #Right_side {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  
+    }
+  }
+
+  
+  @media only screen and (max-width: 800px) {
+    #Main_Container{
+    display: flex;
+    flex-direction: row;
+   }
+  }
+
+  @media only screen and (max-width: 550px) {
+    #Main_Container{
+    display: flex;
+    flex-direction: column;
+   }
+  }
+
+
+
+
+#Right_side > div {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
+    /* height: 350px; */
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+    
+  }
+  
+  #Right_side> div:hover{
+   transform: scale(1.1);
+   z-index:2;
+  }
+
 
 #Right_side .Product{
     /* border: 5px solid; */
@@ -67,11 +134,10 @@
 #Right_side #Pri{
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 40%;
     /* border: 2px solid blue; */
     margin: auto;
   
-    
 }
 
 #Pri p{
@@ -101,7 +167,9 @@
     margin: 0px 8px 8px;
     border:none;
 }
+/* <-------------------- End-------------------> */
 
+/* <--------------------- Styling for Pagination-----------------------> */
 #Pegination{
     display: flex;
   
@@ -115,4 +183,27 @@
     padding: 10px;
     background: none;
     border: none;
+}
+/* <---------------------- End-------------------------------------> */
+
+/* <----------------------- Input and Debouncing---------------------> */
+#citynames{border: 1px solid rgb(124, 122, 122); width: 100%; margin: auto;
+    height: 200px; overflow-y: scroll; margin-top: 0px; border: none;
+    margin-right: 20%;
+}
+
+#B_Search{
+    width: 90%;
+    margin: auto;
+    padding: 10px 0px 10px 20px;
+    color: black;
+    font-weight: 400;
+    border: none;
+    background: #f5f5f5;;
+    border-bottom: 2px solid rgb(215, 213, 211);
+    
+}    
+
+#B_Search:focus{
+    outline: none;
 }
