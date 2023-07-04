@@ -1,11 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart  Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        #main{
+            /* background-color: #fff; */
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .card2{
+            margin: auto;
+            background-color: #e3e6fd;
+
+        }
+        .card-body>div{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        #updation{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+    </style>
+  </head>
+  <body>
+   <div class="container mt-5" id="parent">
+    <div class="input-group mb-3"style="width: 25rem;">
+        <button style="background-color: #00525d;" class="btn btn-success" type="button"id="button-addon1">Apply</button>
+        <input type="text" class="form-control" placeholder="add promocode" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      </div>
+    <div class="card row" class="" id="main" >
+        <div class="card card1 col-sm-8" class="">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">items</th>
+                       <th scope="col">items</th>
+                      <th scope="col">Price</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>img</td>
+                      <td>volinie</td>
+                      <td>200.00</td>
+                      <td id="updation"><button onclick="increment()">&#43;</button>
+                        <p>0</p>
+                        <button onclick="decrement()">&#8722;</button></td>
+                      <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                    </tr>
+                    
+                  </tbody>
+            </table>
+        </div>
+        <div class="card card2 col-sm-4"  style="width: 25rem;" class="">
+            <div class="card-body">
+              <h5 class="card-title">Summary</h5>
+              <div>
+                  <p class="card-text">Total Items</p>
+                  <p class="card-text">1</p>
+              </div>
+              <div>
+                <p class="card-text">order total</p>
+                <p class="card-text">275.00 /-</p>
+            </div>
+              <div>
+                <p class="card-text">Promo Code</p>
+                <p class="card-text">ksdh#$@32</p>
+            </div>
+            <div>
+                <p class="card-text">Shiping</p>
+                <p class="card-text">150.00 /-</p>
+            </div>
+                <div class="card-footer mb-3">
+                    <p class="card-text">Total</p>
+                    <p class="card-text">12664.00</p>
+              </div>
+            <div>
+                <a href="#" style="background-color: #00525d;" class="btn btn-primary d-block mx-auto">Purchase</a>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
 </html>
+<script>
+    console.log("hello");
+</script>
