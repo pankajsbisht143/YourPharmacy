@@ -9,15 +9,26 @@
 </head>
 <body>
     <div id="Main">
+    <div id="Top">  
     <div id="Recm">
-        <p>Most recommended</p>
-        <p id="Prod">Products</p>
+        <!-- <p>Most recommended</p>
+        <p id="Prod">Products</p> -->
+        <img src="https://onemg.gumlet.io/w_878,q_auto,a_ignore,h_103,f_auto,c_fit/09ddb53b-8379-436f-acd4-7457f725fc69.jpg" id="Advertice">
     </div>
+    <div id="Main_Filt" >
+       <select id="P_Filter">
+           <option value="" id="All">Relevance</option>
+           <option value="LTH" >Price:Low to High</option>
+           <option value="HTL" >Price:High to Low</option>
+       </select>
+    </div>
+</div>  
     <div id="Main_Container">
         <div id="Left_side">
+            <div id="Filter">
             <h3 id="Heading_Sel">Product Categories</h3>
             <div class="opt">
-                <p class="opt">Handcare</p>
+                <p >Handcare</p>
                 <i class="fa-solid fa-plus"></i>
             </div>
             <div class="opt">
@@ -60,8 +71,17 @@
                 <p>Protectione</p>
                 <i class="fa-solid fa-plus"></i>
             </div>
-               
         </div>
+        <div id="Input">
+            <input type="text" placeholder="Search Brand" id="B_Search">
+            </div>  
+
+            <div id="citynames" style="margin-bottom: 110px; border: 1px solid rgb(214, 212, 212); padding: 20px; box-sizing: border-box; border-radius: 2px; color: #424242;">
+                <p>All citiies</p>
+                <hr>
+                   
+                </div>
+            </div>
         <div id="Right_side">
 
         </div>
@@ -75,4 +95,33 @@
 </div>
 </body>
 </html>
-<script src="../YourPharmacy/script/Product.js" type="module"></script>
+<script src="../YourPharmacy/script/Product.js" type="module">
+    
+// console.log(Sort_Data)
+
+// document.getElementById("P_Filter").addEventListener("change",function(){
+//   Sort_bt_Price(Sort_Data)
+// });
+
+// function Sort_bt_Price(data){
+//   var Filt_Value=document.getElementById("P_Filter").value;
+//     if(Filt_Value=="LTH"){
+//     var Filt= data.sort((a,b)=>{
+//       return a.Price-b.Price
+//      })
+//      Display_Prod(Filt,Container);
+//    }
+//   else if(Filt_Value=="HTL"){
+//     var Filt= data.sort((a,b)=>{
+//       return b.Price-a.Price
+//      })
+//      Display_Prod(Filt,Container);
+//    }
+
+//    else if(Filt_Value==""){
+//          Display_Prod(data,Container);
+//    }
+  
+// }
+</script>
+

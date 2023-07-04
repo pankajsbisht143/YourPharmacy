@@ -1,5 +1,11 @@
 
-const Display_Prod = (P_data,Container) => {
+const Display_Prod = (P_data,Container,url) => {
+   if(url!==undefined){
+    var Img_Adv=document.getElementById("Advertice");
+    Img_Adv.src=url;
+   }
+    
+   
     Container.innerHTML = ""; // Clear the container before displaying new products
   
     P_data.map(({ img_url, Price, Price_off, title }) => {
@@ -19,11 +25,11 @@ const Display_Prod = (P_data,Container) => {
       P_Div.setAttribute("id", "Pri");
   
       var Price1 = document.createElement("p");
-      Price1.innerText = `${Price_off}`;
+      Price1.innerText = `₹${Price_off}`;
       Price1.style.textDecoration = "line-through";
   
       var Price2 = document.createElement("p");
-      Price2.innerText = `${Price}`;
+      Price2.innerText = `₹${Price}`;
   
       P_Div.append(Price1, Price2);
   
@@ -39,6 +45,8 @@ const Display_Prod = (P_data,Container) => {
     });
   };
 
+  export default Display_Prod;
 
 
-export default Display_Prod;
+
+// <--------------------- Search By brand name----------------------->
