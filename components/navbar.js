@@ -11,20 +11,20 @@ let navbar=()=>{
 
             <div id="nav1e">
                 <a href="#">
-                    <h1>Medicines</h1>
+                    <h3>Medicines</h3>
                 </a>
                 <a href="#">
-                    <h1>Doctor</h1>
+                    <h3>Doctor</h3>
                 </a>
                 <a href="#">
-                    <h1>Pharmacy</h1>
+                    <h3>Pharmacy</h3>
                 </a>
                 <a href="#">
-                    <h1>Other Services</h1>
+                    <h3>Other Services</h3>
                 </a>
                 <span>
                     <input type="text" placeholder="Search" id="Search">
-                    <button id="btn1">Search</button>
+                    <button id="btn1"><ion-icon name="search-outline"></ion-icon></button>
                 </span>
             </div>
         </div>

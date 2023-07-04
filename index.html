@@ -18,7 +18,7 @@
             display: flex;
             gap: 50px;
         }
-        
+
         nav {
             /* width: 100%; */
             /* position: fixed; */
@@ -41,10 +41,15 @@
             gap: 40px;
             align-items: center;
         }
-        #nav1e>a{
+
+        #nav1e>a {
             text-decoration: none;
             color: rgb(0, 81, 92);
         }
+        #nav1e>a:hover{
+            color: rgb(246, 202, 169);
+        }
+
         #menubar {
             display: none;
         }
@@ -58,37 +63,50 @@
             padding-right: 15px;
 
         }
+
         #consultDiv p {
             display: flex;
             font-size: 20px;
             align-items: center;
+            font-weight: bold;
         }
 
         header {
-            
+
             position: relative;
-            
+
         }
-        nav{
+
+        nav {
             width: 100%;
             position: fixed;
             top: 0%;
             padding-right: 25px;
             background-color: white;
         }
+
         #consultDiv>a {
             text-decoration: none;
             color: rgb(0, 81, 92);
             font-size: bold;
         }
+        #consultDiv>a:hover{
+            color: rgb(253,216,188);
+        }
         #Search {
-            width: 200px;
+            width: 25rem;
             height: 30px;
+            padding: 5px;
 
         }
-        #navbar1>div span{
+        /* #Search:hover{
+            background-color: crimson;
+        } */
+
+        #navbar1>div span {
             display: flex;
         }
+
         #navbar1>div span button {
             margin-left: -5px;
             padding: 8.3px;
@@ -97,13 +115,18 @@
             color: white;
             font-weight: bold;
             border: 1px solid rgb(0, 81, 92);
+            width: 50px;
         }
 
         #navbar1>div span input {
             border-radius: 7px 0px 0px 7px;
             border: 1px solid rgb(0, 81, 92);
         }
-
+        #navbar1>div span button:hover{
+            background-color: rgb(253,216,188);
+            border: 1px solid rgb(253,216,188);
+            color: black;
+        }
         #Consult {
             width: 150px;
             height: 40px;
@@ -112,12 +135,23 @@
             border: none;
             background-color: rgb(0, 81, 92);
             color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            /* font-weight: bold; */
+        }
+        #Consult:hover{
+            background-color: rgb(253,216,188);
+            color: black;
         }
         #menunavbar {
             display: none;
         }
 
         /* navbar close  */
+
+
+
+
 
 
         #template {
@@ -130,9 +164,6 @@
             background-repeat: no-repeat;
         }
 
-        
-
-
         .overlay-text {
             width: 30%;
             font-size: 70px;
@@ -141,6 +172,7 @@
             margin-left: 80px;
             /* margin-top: 80px; */
         }
+
         #smallpara {
             margin-top: -60px;
             font-size: 30px;
@@ -151,8 +183,12 @@
             padding: 10px;
             color: rgb(0, 81, 92);
             border-color: 1px solid rgb(7, 60, 67);
+            border-radius: 5px;
         }
-
+        #moreabout:hover{
+            background-color: rgb(0, 81, 92);
+            color: white;
+        }
         .Content {
             text-align: center;
             margin-top: 50px;
@@ -175,302 +211,567 @@
             margin-top: -20px;
 
         }
-        #Details{
-            width: 80%;
+
+
+        .section-p1 {
+            padding: 40px 80px;
+        }
+
+        /* .section-m1 {
+    margin: 40px 0;
+} */
+
+        #feature {
+            display: flex;
+            /* grid-template-columns: repeat(6,1fr); */
+            gap: 10px;
+            align-items: center;
+            /* text-align: center; */
+            /* flex-wrap: wrap; */
+            margin: auto;
+        }
+
+        #feature .fe-box {
+            width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+
+        }
+
+        #feature .fe-box:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+        }
+
+        #feature .fe-box img {
+            width: 100%;
+            margin-bottom: 10px
+        }
+
+        #feature .fe-box h6 {
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            font-size: 15px;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+        }
+
+        #feature .fe-box:nth-child(2) h6 {
+            background-color: #cdebbc;
+        }
+
+        #feature .fe-box:nth-child(3) h6 {
+            background-color: #d1e8f2;
+        }
+
+        #feature .fe-box:nth-child(4) h6 {
+            background-color: #cdd4f8;
+        }
+
+        #feature .fe-box:nth-child(5) h6 {
+            background-color: #f6dbf6;
+        }
+
+        #feature .fe-box:nth-child(6) h6 {
+            background-color: #fff2e5;
+        }
+
+
+
+        #doctorImg {
+            width: 100%;
+            height: 50vh;
+            margin-top: 50px;
+            /* margin: auto; */
+            background-image: url("https://cdn-anbmj.nitrocdn.com/AUXIVIQtsIdjcKgcKxCkSmSPjQBhKiDP/assets/images/optimized/rev-1e23c70/wp-content/uploads/2021/07/Home-Pajes-Website-Banner-Artwork-3.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            /* text-align: center; */
+        }
+
+        #doctorImg>h1 {
+            width: 50%;
+            color: white;
+            padding: 100px 100px 0px 100px;
+            /* padding-left: 80px; */
+            font-size: 40px;
+        }
+
+        #doctorImg>button {
+            width: 10rem;
+            /* height: 0px; */
+            background-color: crimson;
+            /* padding: 20px; */
+            /* padding: 20px; */
+            margin-left: 100px;
+            border: 2px solid white;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+
+
+        }
+
+        #doctorImg>button:hover {
+            background-color: aqua;
+            cursor: pointer;
+        }
+
+
+
+
+
+        #Product>div>div img {
+            width: 100%;
+            height: 20vh;
+           border-radius: 15px;
+        }
+        #Product>div>div{
+            padding: 10px;
+        }
+        #Product>div {
+            /* border: 1px solid red; */
+            border-radius: 15px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            /* background-color: rgba(124, 171, 176, 0.771); */
+        }
+
+        #Product {
+            width: 90%;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: 10px;
             margin: auto;
             margin-top: 50px;
+        }
+
+        #Product>div h3 {
+            padding-left: 10px;
+            margin-top: -8px;
+            /* color: white; */
+        }
+
+        #Product>div>h3+div {
+            display: flex;
+            
+            justify-content: space-between;
+            /* border: 2px solid green; */
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin-bottom: 10px;
+            margin-top: -20px;
            
-            padding: 20px;
+        }
+
+        #Product>div>div>p:first-child {
+            text-decoration: line-through;
+            color: rgb(0, 81, 92);
+            
+        }
+        #Product>div>div>p+p{
+           font-weight: bold;
+           font-size: 20px;
+           color: crimson;
+        }
+        #Product>div>button {
+            display: block;
+            width: 130px;
+            height: 30px;
+            padding: 10px;
             text-align: center;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: rgb(0, 81, 92);
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
-        #Details>div img{
-            width: 100%;
-            height: 50vh;
-           
-        }
-        #Details>div>p{
-            font-size: 25px;
-        }
-        #Details>div{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding: 20px;
-        }
-        @media screen and (min-width:767px) and (max-width:1023px) {
+
+        @media screen and (min-width:767px) and (max-width:1024px) {
+
             /* navbar start */
-            nav{
+            nav {
                 width: 100%;
                 position: fixed;
             }
-            #nav1e{
+
+            #nav1e {
                 width: 100%;
                 display: none;
             }
+
             #consultDiv {
-            display: none;
+                display: none;
             }
-            #menubar{
+
+            #menubar {
                 display: block;
                 /* border: 1px solid green; */
                 /* margin-right: 20px; */
-                margin-right:25px ;
+                margin-right: 25px;
             }
-            #menubar p{
+
+            #menubar p {
                 font-size: 30px;
             }
+
             /* nav{
                 border:  4px solid yellow;
             } */
-            section{
+            section {
                 position: relative;
             }
+
             #menunavbar {
                 width: 100%;
                 display: none;
-                position:fixed;
+                position: fixed;
                 /* right: 0; */
                 top: 6%;
-                height: 90vh;
+                height: 100vh;
                 background-color: white;
             }
-            #menunavbar>div{
+
+            #menunavbar>div {
                 display: flex;
-                flex-direction:column;
+                flex-direction: column;
                 text-align: center;
             }
-           #menunavbar>div>a{
-            text-decoration: none;
-            color: rgb(0, 81, 92);
-            font-size: bold;
-           }
-           #menunavbar>div button{
-            width: 12rem;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            border: 1px solid rgb(0, 81, 92);
-            background-color: rgb(0, 81, 92);
-            text-align: center;
-            margin: auto;
-           }
-            
-           #menunavbar>div a p{
-            font-size: 25px;
-            font-weight: bold;
-           }
-           #close{
-            font-size: 30px;
-        }
-           /* navbar end */
+
+            #menunavbar>div>a {
+                text-decoration: none;
+                color: rgb(0, 81, 92);
+                font-size: bold;
+            }
+
+            #menunavbar>div button {
+                width: 12rem;
+                padding: 10px;
+                border-radius: 8px;
+                color: white;
+                font-weight: bold;
+                border: 1px solid rgb(0, 81, 92);
+                background-color: rgb(0, 81, 92);
+                text-align: center;
+                margin: auto;
+            }
+
+            #menunavbar>div a p {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            #close {
+                font-size: 30px;
+            }
+
+            /* navbar end */
 
 
 
 
 
 
-           #template {
-            width: 100%;
-            /* position: absolute; */
-            height: 30vh;
-            margin: auto;
-            background-image: url("https://daryo.uz/static/pills.webp");
-            /* background-size: cover; */
-            background-repeat: no-repeat;
-            margin-top: 8%;
-            
-            
-        }
-        .overlay-text {
-            width: 30%;
-            font-size: 25px;
+            #template {
+                width: 100%;
+                /* position: absolute; */
+                height: 50vh;
+                margin: auto;
+                background-image: url("https://daryo.uz/static/pills.webp");
+                /* background-size: cover; */
+                background-repeat: no-repeat;
+                margin-top: 8%;
 
-            padding: 20px;
-            margin-left: 80px;
-            /* margin-top: 80px; */
-        }
-        #smallpara {
-            margin-top: 10px;
-            font-size: 20px;
-        }
 
-        #moreabout {
-            width: fit-content;
-            height: 40px;
-            overflow-wrap: break-word;
-            padding: 10px;
-            color: rgb(0, 81, 92);
-            border-color: 1px solid rgb(7, 60, 67);
-        }
+            }
 
-        .Content {
-            text-align: center;
-            /* margin-top: 50px; */
-        }
+            .overlay-text {
+                width: 30%;
+                font-size: 25px;
 
-        .best {
-            font-size: 25px;
-            color: rgb(0, 81, 92);
-        }
+                padding: 20px;
+                margin-left: 80px;
+                /* margin-top: 80px; */
+            }
 
-        .Content>h1 {
-            font-size: 35px;
-            /* margin-top: -20px; */
-        }
+            #smallpara {
+                margin-top: 10px;
+                font-size: 20px;
+            }
 
-        .Content>h1+p {
-            /* width: 50%; */
-            font-size: 20px;
-            margin: auto;
-            /* margin-top: -20px; */
+            #moreabout {
+                width: fit-content;
+                height: 40px;
+                overflow-wrap: break-word;
+                padding: 10px;
+                color: rgb(0, 81, 92);
+                border-color: 1px solid rgb(7, 60, 67);
+            }
 
-        }
-        #Details{
-            grid-template-columns: repeat(2,1fr);
-        }
-        #Details>div img{
-            width: 100%;
-            height: 30vh;
+            .Content {
+                text-align: center;
+                /* margin-top: 50px; */
+            }
+
+            .best {
+                font-size: 30px;
+                color: rgb(0, 81, 92);
+            }
+
+            .Content>h1 {
+                font-size: 40px;
+                /* margin-top: -20px; */
+            }
+
+            .Content>h1+p {
+                /* width: 50%; */
+                font-size: 25px;
+                margin: auto;
+                /* margin-top: -20px; */
+
+            }
+
+            #feature {
+                display: flex;
+                align-items: center;
+                /* justify-content: space-between; */
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: auto
+            }
+
+            #doctorImg {
+                width: 100%;
+                height: 80vh;
+                background-image: url("https://cdn-anbmj.nitrocdn.com/AUXIVIQtsIdjcKgcKxCkSmSPjQBhKiDP/assets/images/optimized/rev-1e23c70/wp-content/uploads/2021/07/Home-Pajes-Website-Banner-Artwork-3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+
+            #Product {
            
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 10px;
+          
+       }
+       #Product>div{
+            width: 80%;
+            margin: auto;
         }
         }
 
         @media screen and (min-width:0px) and (max-width:766px) {
+
             /* nav{
                 position: fixed;
             } */
             /* navbar start */
-            nav{
+            nav {
                 width: 100%;
                 position: fixed;
             }
-            #nav1e{
+
+            #nav1e {
                 display: none;
             }
+
             #consultDiv {
-            display: none;
+                display: none;
             }
-            #menubar{
+
+            #menubar {
                 display: block;
                 /* border: 1px solid green; */
                 margin-right: 20px;
             }
-            #menubar p{
+
+            #menubar p {
                 font-size: 30px;
             }
+
             /* nav{
                 border:  4px solid yellow;
             } */
-            section{
+            section {
                 position: relative;
             }
+
             #menunavbar {
                 width: 100%;
                 display: none;
-                position:fixed;
+                position: fixed;
                 right: 0;
                 top: 8%;
-                height: 90vh;
+                height: 100vh;
                 background-color: white;
             }
-            #menunavbar>div{
+
+            #menunavbar>div {
                 display: flex;
-                flex-direction:column;
+                flex-direction: column;
                 text-align: center;
             }
-           #menunavbar>div>a{
-            text-decoration: none;
-            color: rgb(0, 81, 92);
-            font-size: bold;
-           }
-           #menunavbar>div button{
-            width: 12rem;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            border: 1px solid rgb(0, 81, 92);
-            background-color: rgb(0, 81, 92);
-            text-align: center;
+
+            #menunavbar>div>a {
+                text-decoration: none;
+                color: rgb(0, 81, 92);
+                font-size: bold;
+            }
+
+            #menunavbar>div button {
+                width: 12rem;
+                padding: 10px;
+                border-radius: 8px;
+                color: white;
+                font-weight: bold;
+                border: 1px solid rgb(0, 81, 92);
+                background-color: rgb(0, 81, 92);
+                text-align: center;
+                margin: auto;
+            }
+
+            #menunavbar>div a p {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #close {
+                font-size: 30px;
+            }
+
+            /* navbar end */
+
+
+
+
+
+
+
+            #template {
+                width: 100%;
+                height: 40vh;
+                margin: auto;
+                margin-top: 20%;
+                background-image: url("https://daryo.uz/static/pills.webp");
+                background-size: cover;
+                background-repeat: no-repeat;
+
+
+            }
+
+            .overlay-text {
+                width: 35%;
+                font-size: 20px;
+
+                padding: 20px;
+                margin-left: 20px;
+                /* margin-top: 80px; */
+            }
+
+            #smallpara {
+                margin-top: 10px;
+                font-size: 15px;
+            }
+
+            #moreabout {
+                /* width: fit-content; */
+                height: 35px;
+                /* overflow-wrap: break-word; */
+                /* padding: 10px; */
+                color: rgb(0, 81, 92);
+                border-color: 1px solid rgb(7, 60, 67);
+                font-size: 10px;
+                /* margin-bottom: 20px; */
+            }
+
+            .Content {
+                text-align: center;
+                /* margin-top: 50px; */
+            }
+
+            .best {
+                font-size: 20px;
+                color: rgb(0, 81, 92);
+            }
+
+            .Content>h1 {
+                font-size: 25px;
+                /* margin-top: -20px; */
+            }
+
+            .Content>h1+p {
+                /* width: 50%; */
+                font-size: 15px;
+                margin: auto;
+                /* margin-top: -20px; */
+
+            }
+
+            #feature {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                /* align-items: center; */
+                /* text-align: center; */
+
+                /* margin: auto; */
+            }
+
+            #doctorImg {
+                width: 100%;
+                height: 50vh;
+                background-image: url("https://cdn-anbmj.nitrocdn.com/AUXIVIQtsIdjcKgcKxCkSmSPjQBhKiDP/assets/images/optimized/rev-1e23c70/wp-content/uploads/2021/07/Home-Pajes-Website-Banner-Artwork-3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #doctorImg>h1 {
+                width: 50%;
+                color: white;
+
+                /* padding-left: 80px; */
+                font-size: 20px;
+            }
+
+            #doctorImg>button {
+                width: 10rem;
+                /* height: 0px; */
+                background-color: crimson;
+                /* padding: 20px; */
+                /* padding: 20px; */
+                /* margin-left: 100px; */
+                border: 2px solid white;
+                padding: 10px;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+
+
+            }
+
+
+
+            #Product {
+           
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            /* gap: 10px;
             margin: auto;
-           }
-            
-           #menunavbar>div a p{
-            font-size: 20px;
-            font-weight: bold;
-           }
-           #close{
-            font-size: 30px;
+            margin-top: 50px; */
         }
-           /* navbar end */
-
-
-
-
-
-
-
-           #template {
-            width: 100%;
-            height: 40vh;
+        #Product>div{
+            width: 70%;
             margin: auto;
-            margin-top: 20%;
-            background-image: url("https://daryo.uz/static/pills.webp");
-            /* background-size: cover; */
-            background-repeat: no-repeat;
-            
-            
-        }
-        .overlay-text {
-            width: 35%;
-            font-size: 20px;
-
-            padding: 20px;
-            margin-left: 80px;
-            /* margin-top: 80px; */
-        }
-        #smallpara {
-            margin-top: 10px;
-            font-size: 15px;
-        }
-
-        #moreabout {
-            /* width: fit-content; */
-            height: 30px;
-            /* overflow-wrap: break-word; */
-            padding: 10px;
-            color: rgb(0, 81, 92);
-            border-color: 1px solid rgb(7, 60, 67);
-            font-size: 10px;
-        }
-
-        .Content {
-            text-align: center;
-            /* margin-top: 50px; */
-        }
-
-        .best {
-            font-size: 15px;
-            color: rgb(0, 81, 92);
-        }
-
-        .Content>h1 {
-            font-size: 20px;
-            /* margin-top: -20px; */
-        }
-
-        .Content>h1+p {
-            /* width: 50%; */
-            font-size: 10px;
-            margin: auto;
-            /* margin-top: -20px; */
-
-        }
-        
-        #Details{
-            grid-template-columns: repeat(1,1fr);
         }
         }
     </style>
@@ -479,7 +780,7 @@
 <body>
 
     <div id="navbar">
-       
+
     </div>
     <div id="template">
         <!-- <img src="https://wallpaperaccess.com/full/1621379.jpg" alt=""> -->
@@ -496,37 +797,145 @@
             amelioration or cure of disease, illness, injury, and other physical and mental impairments in people.
         </p>
     </div>
-    <div id="Details">
-        <div>
-            <img src="https://png.pngtree.com/png-vector/20220518/ourmid/pngtree-telemedicine-medicine-internet-online-consultation-png-image_4645191.png" alt="online consultation">
-            <p>Online Consultation</p>
+
+    <div id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="./images/f1.png" alt="">
+            <h6>Free Trail</h6>
         </div>
-        <div>
-            <img src="https://media.istockphoto.com/id/1300273646/vector/hospital-icon-design-vector-illustration-template.jpg?s=612x612&w=0&k=20&c=D3tyyURUrIL5b2jpNCEMcQNz57oF5mSlkLzPEfYagSo=" alt="">
-            <p>Hospital</p>
+        <div class="fe-box">
+            <img src="./images/f2.png" alt="">
+            <h6>Online Order</h6>
         </div>
-        <div>
-            <img src="https://thumbs.dreamstime.com/b/syringe-vaccine-bottle-flat-design-vector-blue-tone-182754395.jpg" alt="">
-            <p>Medicines</p>
+        <div class="fe-box">
+            <img src="./images/f3.png" alt="">
+            <h6>Save Money</h6>
         </div>
-        <div>
-            <img src="https://thumbs.dreamstime.com/b/blood-test-icon-vector-medical-equipment-graphic-design-logo-web-site-social-media-mobile-app-ui-illustration-blood-test-icon-216213721.jpg" alt="">
-            <p>Pathology Tests</p>
+        <div class="fe-box">
+            <img src="./images/f4.png" alt="">
+            <h6>Promotions</h6>
         </div>
-        <div>
-            <img src="https://cdn.vectorstock.com/i/preview-1x/64/22/nurse-icon-vector-5076422.webp" alt="">
-            <p>Nursing</p>
+        <div class="fe-box">
+            <img src="./images/f5.png" alt="">
+            <h6>Happy Sell</h6>
         </div>
-        <div>
-            <img src="https://3.imimg.com/data3/UC/PC/MY-9041239/24-hrs-emergency-250x250.jpg" alt="">
-            <p>Emergency</p>
+        <div class="fe-box">
+            <img src="./images/f6.png" alt="">
+            <h6>F24/7 Support</h6>
         </div>
     </div>
+    <div id="doctorImg">
+        <h1>Avail a free consultation and start your heathcare journey today</h1>
+        <button>Register</button>
+    </div>
+    <div id="brand">
+        <h2>Brand</h2>
+        <div>
+            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/744e88c1-8512-49de-8d3c-591da89e6326.png" alt="">
+            <p>Himalaya</p>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/09c6de2b-42ed-4d0a-951b-a9925cf0c0b7.png" alt="">
+            <p>Biluma</p>
+        </div>
+        <div>
+          <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/b2a302a4-242b-47d4-8b35-0d47bf16554e.png" alt="">
+          <p>Zandu</p>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/743b54f8-fad0-4f7a-8470-e0a31718f187.png" alt="">
+            <p>Omron</p>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/48c07301-af6f-4f7c-a6e1-d9ee09718e04.png" alt="">
+            <p>Kapiva</p>
+        </div>
+        <div>
+            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/7ed3eb83-f364-4de4-87ea-8306429f3c35.png" alt="">
+            <p>Hansaplat</p>
+        </div>
+    </div>
+    <div id="Product">
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-CACR1-007689/M-TORR-800-CAPSULE-10_1.webp?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>M Torr 800 Capsule</h3>
+            <div>
+                <p>MRP₹365</p>
+                <p>₹292.00</p>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-TACR1-051775/UBICAR-Tablet-10_1.webp?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>Ubicar Tablet 10</h3>
+            <div>
+                <p>MRP₹384</p>
+                <p>₹307.20</p>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-CACR1-008580/ANTOXID-HC-CAPSULE-30_1.webp?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>Reffron Tablet 15</h3>
+            <div>
+                <p>MRP₹390</p>
+                <p>₹312.00</p>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-TACR1-079439/hairbless-tablet-30_hairbless-tablet-30--TM-TACR1-079439_1.png?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>Hairbless Tablet 30</h3>
+            <div>
+                <p>MRP₹630</p>
+                <p>₹535.50</p>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-TACR1-051632/SYNERTAB-Tablet-10_1.webp?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>Synertab Tablet 10</h3>
+            <div>
+                <p>MRP₹315
+                </p>
+                <p>₹252.00</p>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div>
+            <div>
+                <img src="https://assets.truemeds.in/Images/ProductImage/TM-CACR1-009921/T-HEAL-CAPSULE-10_t-heal-capsule-10--TM-CACR1-009921_1.webp?tr=cm-pad_resize,bg-FFFFFF,lo-true,w-202"
+                    alt="">
+            </div>
+            <h3>T Heal Capsule 10</h3>
+            <div>
+                <p>MRP₹298</p>
+                <p>₹238.40</p>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+    </div>
+    
 </body>
 
 </html>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="./script/index.js" type="module">
-   
+
 </script>
