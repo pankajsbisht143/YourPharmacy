@@ -1,0 +1,20 @@
+#address_mainDIV{
+    display: flex;
+    flex-direction:column;
+    margin-left: 35%;
+    margin-top: 8%;
+    margin-right: 50%;
+    
+    
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nice-form-group{
+    padding-top: 15px;
+}
+#address_div{
+    padding-left: 17%;
+    padding-bottom: 30px;
+    color: rgb(0, 81, 92);
+}
