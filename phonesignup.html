@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="sender">
+        <input type="number" id="number" placeholder="enter your Number" />
+        <div id="recaptcha-container"></div>
+        <button type="button" id="send" onclick="phoneauth()">Send</button>
+      </div>
+      <div id="verifier">
+        <input type="number" id="verificationcode" placeholder="OTP Code" />
+        <button type="button" id="verify" onclick="codeverify()">Verify</button>
+        <div class="p-conf">Number Verified</div>
+        <div class="n-conf">OTP ERROR</div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDfTvxwRCZTEIlAvLRa2_WxFcQvn1NPXHQ",
+        authDomain: "auth-5f551.firebaseapp.com",
+        databaseURL: "https://auth-5f551-default-rtdb.firebaseio.com",
+        projectId: "auth-5f551",
+        storageBucket: "auth-5f551.appspot.com",
+        messagingSenderId: "1094224469393",
+        appId: "1:1094224469393:web:ad7568e77bb8a88286ce30",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      render();
+      function render(){
+        window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
+        recaptchaVerifier.render();
+      }
+      //function for send message
+      function phoneauth(){
+        var number= document.querySelector('#number');
+          firebase.auth().signInWithPhoneNumber(number,
+          window.recaptchaVerifier).then((confirmationResult)=>{
+            window.confirmationResult=confirmationResult;
+            coderesult=confirmationResult;
+            document.querySelector('sender').style.display='none';
+            document.querySelector('verifier').style.display='block';
+          }).catch(function(error){
+            alert(error.message);
+          })
+      }
+
+      function codeverify(){
+        var code=document.querySelector("#verificationcode").value;
+        coderesult.confirm(code).then(function(){
+          document.querySelector("#p-conf")[0].style.display='block';
+          document.querySelector("#n-conf")[0].style.display='none';
+        }).catch(function(){
+          document.querySelector("#p-conf")[0].style.display='none';
+          document.querySelector("#n-conf")[0].style.display='block';
+        })
+      }
+    </script>
+  </body>
+</html>
