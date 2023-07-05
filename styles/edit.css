@@ -1,0 +1,66 @@
+#main_containerDIV{
+    display: flex;
+}
+
+
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 19px 13px;
+    margin: 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type=submit]:hover {
+    background-color:  #2e4ad6;
+    border: 1px solid black
+
+  }
+  input[type=number]{
+    width: 100%;
+    padding: 19px 13px;
+    margin: 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 25px;
+    border-radius: 10px;
+  }
+  
+  #address_mainDIV {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 33px;
+    margin-right: 48%;
+    margin-top: 90px;
+}
+  
+label{
+    font-size: 25px;
+    padding-left: 1px;
+}
+
+#payment_DIV{
+    border: 2px solid black;
+    margin-top: 90px;
+}
