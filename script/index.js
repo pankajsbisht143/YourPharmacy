@@ -1,8 +1,11 @@
 import navbar from "../components/navbar.js";
+import footer from "../components/footer.js";
 
 let navbarC=document.getElementById('navbar');
 navbarC.innerHTML=navbar();
 
+let footerMain=document.getElementById("footerMain");
+footerMain.innerHTML=footer();
 
 
 
