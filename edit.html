@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="./styles/edit.css">
+</head>
+<body>
+    <div id="main_containerDIV">
+
+        <div id="address_mainDIV">
+    
+            <form id="address_form">
+                <label for="contact details">CONTACT DETAILS</label>
+                <input type="text" id="fName" placeholder="First Name" value="" required/>
+                <input type="text" id="lName" placeholder="Last Name" required />
+                <input type="number" id="number" placeholder="Mobile Number" value="" required />
+                
+                <label for="address">ADDRESS</label>
+                <input type="text" id="pincode" placeholder="Pin Code*" value="" required/>
+                <input type="text" id="address" placeholder="Address(House No.,Building,Street,Area)*" value=""  required/>
+                <input type="text" id="locality" placeholder="Locality/Town*" value="" required />
+                  <input type="text" id="city" placeholder="City/District*" value="" required/>
+                  <input type="text" id="state" placeholder="State*" value="" required />
+          
+                <input type="submit" id="change_btn" style="color: aliceblue ; background-color:rgb(0, 81, 92);" placeholder="Save Changes" value="Save Changes" />
+    
+                </form>    
+            </div>
+            
+    
+         <div id="payment_DIV">
+          <p>Delivery Estimates</p>
+         </div> 
+    
+    </div>
+</body>
+</html>
+<script src="./script/edit.js"></script>

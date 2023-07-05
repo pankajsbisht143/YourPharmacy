@@ -1,66 +1,20 @@
-let address  = document.getElementById("submit");
-
-address.addEventListener("click",function(){
-    submitAddress();
-})
-
-let address_array = JSON.parse(localStorage.getItem("user_address")) || [];
-
-displayAddress(address_array);
- function submitAddress(){
-    event.preventDefault();
-    let pincode = document.getElementById("pincode").value;
-    let city = document.getElementById("city").value;
-    let state = document.getElementById("state").value;
-    let firstName = document.getElementById("fName").value;
-    let lastName = document.getElementById("lName").value;
-    let address = document.getElementById("address").value;
-    let number = document.getElementById("number").value;
-    let locality = document.getElementById("locality").value;
-
-    if(pincode == "" ||
-       city == ""  ||
-       state == ""  ||
-       firstName == ""  ||
-       lastName == ""  ||
-       address == ""  ||
-       number == ""  ||
-       locality == ""
-       ){
-        alert("Please Fill All The Required Fields");
-        return;
-       }
-
-    let address_Obj = {
-        firstName : firstName,
-        lastName : lastName,
-        number : number,
-        pincode : pincode,
-        address :address,
-        city : city,
-        state : state,
-        locality : locality    
+const userData = async function(){
+    try{
+    let res = await fetch(" http://localhost:3000/address");
+    let data = await res.json();
+    displayUserAddress(data);
     }
-    console.log(address_Obj)
-    address_array.push(address_Obj);
-
-    localStorage.setItem("user_address",JSON.stringify(address_array));
-
-    document.getElementById("pincode").value = "";
-    document.getElementById("city").value = "";
-    document.getElementById("state").value = "";
-    document.getElementById("fName").value = "";
-    document.getElementById("lName").value = "";
-    document.getElementById("address").value = "";
-    document.getElementById("number").value = "";
-    document.getElementById("locality").value = "";
-
+    catch(error){
+        console.log(error);
+    }
 }
 
-function displayAddress(arr){
-document.getElementById("add_here").innerText = "";
+userData();
 
-arr.map(function(elem,idx){
+let addressContainer = document.getElementById("main_addressContainer");
+function displayUserAddress(data){
+   addressContainer.innerHTML = "";
+   data.forEach(function(elem){
     var Main_div = document.createElement("div");
     Main_div.setAttribute("id","add_div_here");
 
@@ -75,31 +29,25 @@ arr.map(function(elem,idx){
 
     var remove = document.createElement("button");
     remove.textContent = "REMOVE";
-    remove.addEventListener("click",function(){
-        deleteFun(elem,idx);
+    remove.addEventListener("click",async function(){
+        try{
+          await fetch(`http://localhost:3000/address/${elem.id}`,{
+            method : "DELETE",
+          });
+        }
+        catch(err){
+            console.log(err);
+        }
     });
 
     var edit = document.createElement("button");
     edit.textContent = "EDIT";
+    edit.addEventListener("click",function(){
+        location.href = "edit.html";
+        localStorage.setItem("addressID",elem.id);
+    })
 
     Main_div.append(userName,userADD,num,remove,edit);
-    document.getElementById("add_here").append(Main_div);
-
-    // <-------- display none property ------->
-
-    var magic = document.getElementById("address_mainDIV");
-
-    magic.style.display = "None";
-});
-    var top = document.getElementById("top");
-    top.style.border = "none";
-
-}
-
-function deleteFun(elem,idx){
-    address_array.splice(idx,1);
-    localStorage.setItem("user_address",JSON.stringify(address_array));
-    displayAddress(address_array);
-    var magic = document.getElementById("address_mainDIV");
-    magic.style.display = "visible";
+    addressContainer.append(Main_div);
+   });
 }
