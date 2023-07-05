@@ -698,6 +698,11 @@ main h1 {
 
 
 /* .....footer start.... */
+#footImg>img{
+    width: 100%;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
 #footer{
     display: flex;
     flex-direction: column;
