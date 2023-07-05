@@ -10,12 +10,14 @@
             /* background-color: #fff; */
             display: grid;
             grid-template-columns: repeat(2 , 1fr);
-            gap: 20px;
+            /* gap: 20px; */
             padding: 20px;
         }
         .card2{
-            margin: auto;
-            background-color: #e3e6fd;
+            /* margin: auto; */
+            background-color: #d1e7dd;
+            position: fixed;
+            left:60rem
 
         }
         .card-body>div{
@@ -28,17 +30,64 @@
             justify-content: space-evenly;
             align-items: baseline;
         }
+        .img-thumbnail{
+          max-width: 65%;
+        }
+        tbody>tr>td{
+          width: 40%;
+          margin: 50px 0px;
+        }
+          @media only screen and (max-width: 1022px) {
+              /* CSS rules specific to mobile devices */
+                #main{
+                    display: grid;
+                    grid-template-columns: repeat(1 , 1fr);
+                    gap: 20px;
+                    padding: 20px;
+                }
+                .card2{
+            /* margin: auto; */
+                position: relative;
+                left: 3rem;
+                
+
+        }
+
+
+              /* Additional mobile styles... */
+    }
+    @media only screen and (max-width: 600px)  {
+              /* CSS rules specific to mobile devices */
+                #main{
+                    display: grid;
+                    grid-template-columns: repeat(1 , 1fr);
+                    gap: 20px;
+                    padding: 20px;
+                }
+                .card2{
+            /* margin: auto; */
+                position: relative;
+                left: 6px;
+                
+
+        }
+
+
+              /* Additional mobile styles... */
+    }
     </style>
   </head>
   <body>
+   
+    <div id="liveAlertPlaceholder"></div>
    <div class="container mt-5" id="parent">
     <div class="input-group mb-3"style="width: 25rem;">
-        <button style="background-color: #00525d;" class="btn btn-success" type="button"id="button-addon1">Apply</button>
-        <input type="text" class="form-control" placeholder="add promocode" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
+        <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
       </div>
-    <div class="card row" class="" id="main" >
-        <div class="card card1 col-sm-8" class="">
-            <table class="table table-striped">
+    <div class="" class="" id="main" >
+        <div class="card card1" id="c_1">
+            <!-- <table class="table table-striped">
                 <thead>
                     <tr>
                       <th scope="col"></th>
@@ -62,30 +111,30 @@
                     </tr>
                     
                   </tbody>
-            </table>
+            </table> -->
         </div>
-        <div class="card card2 col-sm-4"  style="width: 25rem;" class="">
+        <div class="card card2" id="c_2" style="width: 25rem;" class="">
             <div class="card-body">
               <h5 class="card-title">Summary</h5>
               <div>
                   <p class="card-text">Total Items</p>
-                  <p class="card-text">1</p>
+                  <p class="card-text" id="total_item">1</p>
               </div>
               <div>
                 <p class="card-text">order total</p>
-                <p class="card-text">275.00 /-</p>
+                <p class="card-text" id="order"></p>
             </div>
               <div>
                 <p class="card-text">Promo Code</p>
-                <p class="card-text">ksdh#$@32</p>
+                <p class="card-text" id="promo_html">#####</p>
             </div>
             <div>
                 <p class="card-text">Shiping</p>
-                <p class="card-text">150.00 /-</p>
+                <p class="card-text">150</p>
             </div>
                 <div class="card-footer mb-3">
-                    <p class="card-text">Total</p>
-                    <p class="card-text">12664.00</p>
+                    <p class="card-text"> <b>Total</b></p>
+                    <p class="card-text" id="total"></p>
               </div>
             <div>
                 <a href="#" style="background-color: #00525d;" class="btn btn-primary d-block mx-auto">Purchase</a>
@@ -102,5 +151,162 @@
   </body>
 </html>
 <script>
-    console.log("hello");
+        let Arr = [
+        {
+          "img_url": "https://images.apollo247.in/pub/media/catalog/product/b/a/bas0260_1.jpg",
+          "title_sh": "Basic Ayurveda Trifala Drishti Eye Drop, 10 ml",
+          "title": "Basic Ayurveda Trifala Drishti Eye...",
+          "Price_off": "₹62",
+          "Price": "₹60"
+        },
+        {
+          "img_url": "https://images.apollo247.in/pub/media/catalog/product/A/Q/AQU0308_1_4.jpg",
+          "title_sh": "Aqualens Comfort Solution, 120 ml",
+          "title": "Aqualens Comfort Solution, 120 ml...",
+          "Price_off": "₹240",
+          "Price": "₹230"
+        },
+        {
+          "img_url": "https://images.apollo247.in/pub/media/catalog/product/v/i/visionplus_1.png",
+          "title_sh": "Nutraswiss VisionPlus, 100 Capsules",
+          "title": "Nutraswiss VisionPlus, 100 Capsules...",
+          "Price_off": "₹2490",
+          "Price": "₹2449"
+        },
+        {
+          "img_url": "https://images.apollo247.in/pub/media/catalog/product/b/a/bas0260_1.jpg",
+          "title_sh": "Basic Ayurveda Trifala Drishti Eye Drop, 10 ml",
+          "title": "Basic Ayurveda Trifala Drishti Eye...",
+          "Price_off": "₹62",
+          "Price": "₹60"
+        },
+        {
+          "img_url": "https://images.apollo247.in/pub/media/catalog/product/A/Q/AQU0308_1_4.jpg",
+          "title_sh": "Aqualens Comfort Solution, 120 ml",
+          "title": "Aqualens Comfort Solution, 120 ml...",
+          "Price_off": "₹240",
+          "Price": "₹230"
+        },
+      ];
+
+    localStorage.setItem("Cart" , JSON.stringify(Arr));
+    let get_items = JSON.parse(localStorage.getItem("Cart"));
+    display(get_items)
+    function display(get_items) {
+      document.getElementById("c_1").innerHTML = ""
+      get_items.forEach((e,i) => {
+        let div1 = document.createElement("div");
+        div1.innerHTML = `<table class="table table-hover">
+          <tbody>
+            <tr>
+              <th scope="row">${i+1}</th>
+              <td> <div>
+                <img src=${e.img_url} class="img-thumbnail" alt="img"></div></td>
+                <td>${e.title_sh}</td>
+                <td>${e.Price}</td>
+                <td id=""><button onclick="increment(${i})">&#43;</button></td>
+                <td><p id="count">1</p></td>
+                <td id=""><button onclick="decrement(${i})">&#8722;</button></td>
+                <td><button type="button" onclick="del(get_items,${i})" class="btn-close" aria-label="Close"></button></td>
+                </tr>
+                
+                </tbody>
+                </table>`
+                document.getElementById("c_1").append(div1)
+                // console.log(e,i);
+                // document.getElementById(`del-${i}`).addEventListener("click", () => {
+                //         del(get_items,i);
+                //   });
+        
+      });
+      
+    }
+    
+    let order = document.getElementById("order")
+    let total = document.getElementById("total")
+    let global_order = 0
+    let discountVal = global_order+150;
+    let incre_cost = 0
+    let decre_cost = 0
+    let c = 1;
+    function increment(p) {
+        c++;
+      document.getElementById("count").innerHTML = c;
+      incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
+        global_order += incre_cost
+        order.innerHTML = (global_order);
+        total.innerHTML = global_order+150
+    }
+
+    function decrement(p) {
+      if(c>1){
+        c--;
+        document.getElementById("count").innerHTML = c;
+        decre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
+        global_order -= decre_cost
+        order.innerHTML = (global_order);
+        total.innerHTML = global_order+150
+      }
+    }
+    
+
+    let total_item = document.getElementById("total_item")
+    total_item.innerHTML = get_items.length;
+
+    order_func(get_items)
+    function order_func(arr) {
+      let total_order = 0;
+      arr.forEach(e => {
+        total_order+=parseFloat(e.Price.replace("₹" , ""));
+      });
+      global_order += total_order
+      order.innerHTML = (total_order);
+      if(arr.length === 0){
+        total.innerHTML = 0
+      }else{
+        total.innerHTML = total_order+150
+
+      }
+
+    }
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            // let message = "You got 20% discount"
+            const appendAlert = (message, type) => {
+              const wrapper = document.createElement('div')
+              wrapper.innerHTML = ""
+              wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+              ].join('')
+
+              alertPlaceholder.append(wrapper)
+            }
+            
+       document.getElementById("liveAlertBtn").addEventListener("click" , ()=>{
+              // console.log("click");
+        let getVal = document.getElementById("promo_input").value;
+      if(getVal === "masai123" || getVal === "saifkhan"){
+        appendAlert("congrats 🥳 You got 20% discount" , "success")
+        document.getElementById("promo_html").innerHTML = getVal;
+      let discount = global_order - (global_order * 0.20);
+      total.innerHTML = discount+150;
+    }else{
+            appendAlert("Sorry! Promocode does not exits 😓" , "danger")
+    }
+    })
+
+
+
+    function del(arr,i) {
+      console.log(arr,i);
+        arr.splice(i,1);
+        localStorage.setItem("Cart" , JSON.stringify(arr));
+       let r = JSON.parse(localStorage.getItem("Cart"))
+      display(r)
+      total_item.innerHTML = r.length;
+      order_func(r)
+    }
+
 </script>
