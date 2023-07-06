@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/72215895a8.js"></script>
+    <link rel="stylesheet" href="../YourPharmacy/styles/Product_detail.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      #NR_Tag{
+        font-size: 20px;
+        color: #00525d;
+        font-weight: 600;
+      }
+
+      #Pr_Title{
+        font-size: 25px;
+        color: #00525d;
+        font-weight: 700;
+      }
+
+      #Mfg{
+        font-size: 20px;
+        color: #027a8a;
+        font-weight: 600;
+      }
+
+      /* <--------------------Styling For Zoom */
+      /* * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		} */
+		body {
+			font-family: 'Inter', 'Roboto',sans-serif;
+		}
+		.f {
+			display: flex;
+		}
+		.a {
+			align-items: center;
+		}
+		.j {
+			justify-content: center;
+		}
+		/* .cn {
+			height: 100vh;
+		} */
+		/* .wp {
+			--t: 900px;
+			width: var(--t);
+		} */
+		/* .wp aside {
+			width: 50%;
+		} */
+		.wp aside:last-child {
+			padding: 0 0 0 10px;
+		}
+		.mgt {
+			margin-top: 10px;
+      /* border: 1px solid; */
+      padding-left: 130px;
+		}
+		/* Zoom styles */
+		.zoom, .original {
+			position: relative;
+		}
+		.zoom {
+			display: inline-block;
+		}
+		.original {
+			cursor: crosshair;
+		}
+		#target {
+			width: calc(var(--t) / 2);
+		}
+		.zoom .viewer {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+      margin-left: 20px;
+			overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		}
+		.zoom .viewer img {
+			position: absolute;
+		}
+		.magnifier {
+			position: absolute;
+			background: #000;
+			opacity: 0.7;
+			top: 0;
+			left: 0;
+		}
+		.magnifier, .viewer {
+			display: none;
+		}
+		.original:hover ~ div {
+			display: block;
+		}
+		.original::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+		}
+    </style>
+</head>
+<body>
+    <div id="PD_main_Container">
+        <div id="PD_Left">
+            <div id="PD_Tag">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <h4 >1083 people bought in last 7 days</h4>
+            </div>
+            <div id="PD_Detail">
+                <div id="PD_top">
+                    <div id="Top_Left">
+                        <div id="Show_Img">
+                          <div class="cn f a j">
+
+                            <div class="wp f">
+                              <aside>
+                                <div class="zoom">
+                                  <div class="original">
+                                    <img src="https://onemg.gumlet.io/images/c_fit,f_auto,h_150,w_150,q_auto/ea6c5e19658c4a00a079660a76eaf2ff/muscleblaze-mb-super-gainer-xxl-no-added-sugar-for-muscle-growth-chocolate.jpg" id="target">
+                                  </div>
+                                  <div class="viewer">
+                                    <img src="https://onemg.gumlet.io/images/c_fit,f_auto,h_150,w_150,q_auto/ea6c5e19658c4a00a079660a76eaf2ff/muscleblaze-mb-super-gainer-xxl-no-added-sugar-for-muscle-growth-chocolate.jpg" id="View">
+                                  </div>
+                                  <div class="magnifier"></div>
+                                </div>	
+                              </aside>
+                             
+                            </div>
+                          </div>
+                           
+                        </div>
+                        <!-- -------------carousel------------ -->
+                         <div id="carousel">
+                          <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_1.png" alt="Slide 1" id="img1">
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_7.jpg" alt="Slide 2" id="img2">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_7.jpg" alt="Slide 3" id="img3">
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_2.jpg" alt="Slide 4" id="img4">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_2.jpg" alt="Slide 5" id="img5">
+                                <img src="https://images.apollo247.in/pub/media/catalog/product/8/9/8908012692867_1.png" alt="Slide 6" id="img6">
+                              </div>
+                              <!-- Add more slide items as needed -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                              
+                        </div>   
+                        <!-- <aside>
+                          <div class="mgt">
+                          <input type="range" min="2" max="10" value="2">
+                        </div>
+                      </aside>  -->
+                    </div>
+                    <div id="Top_Right">
+                      <p id="Pr_Title">Contour Plus Blood Glucose Test Strips, 50 Count</p>
+                      <div>
+                        <h4 id="Mfg">Manufacturer/Marketer</h4>
+                        <p id="MFG_by">ASCENSIA DIABETES CARE INDIA PVT LTD</p>
+                        <p>This item is <span id="NR_Tag">Not Returnable.</span></p>
+                      </div>
+                    </div>
+                </div>
+                <div id="PD_bottom">
+                  <h3>PRODUCT DETAILS</h3>
+                  <h5>Description</h5>
+                  <p id="Descrp">Getting all the required vitamins and minerals from your diet is difficult. To protect your health and stay fit requires an appropriate amount of nutrition. You can fill this nutrient gap with the help of MuscleBlaze MB-Vite with immunity boosters and digestive enzymes.
+
+                    It is a scientifically formulated multivitamin for sports and fitness enthusiasts to help boost immunity, fill nutrient gaps, enhance energy, build stamina, support recovery, and metabolic processes.
+                    
+                    The potent blend of 25 vitamins and minerals contains 100% RDA of immunity boosters such as Vitamin A, Vitamin C, Vitamin D, Vitamin E, Vitamin K, folic acid, zinc, copper, iron, selenium, and more that support the immunity system and enhance the overall health of your body. The digestive blend ensures the multivitamins and minerals are digested and absorbed by the body for optimum results.</p>
+                    <img src="https://t2.gstatic.com/images?q=tbn:ANd9GcRln33jSmwxsSXHXDbOIDIrxezRgyrgukbf6nC3QX25S8dxsSyx" width="60px">
+                    <div id="USE">
+                      <p>Uses <span id="Use_Prod">MuscleBlaze MB-VITE Daily Multivitamin, 60 tablets</span></p> 
+                      <p>Health Care</p>
+                    </div>
+                    <div >
+                      <h5>Key Benefits</h5>
+                      <p id="Benifit">Reduces oxidative stress, promotes faster muscle recovery, eliminates post-workout fatigue, and boosts immunity.</p>
+                    </div>
+                    <div >
+                      <h5>Key Ingredients</h5>
+                      <p id="Ingredient">Mineral Blend, diluent (Maize Starch & INS 421), vitamin Blend, Thickener (INS 468, INS 462 & INS 464), Stabilizer (INS 1202), Disintegrant (Sodium starch glycolate), Binder (INS 1201), Enzyme Blend, Glazing agent (INS 553 iii), Anti-sticking agent (INS 470 iii) & Anticaking agent (INS 551).</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+         <div id="PD_Right">
+          <div>
+            <h3>Price :<span id="PD_Price">0</span></h3>
+            <h4 id="MRP" style="padding: 10px;">0</h4>
+            <h4 id="Discount">0</h4>
+          </div>
+         <div>
+          <i class="fa-solid fa-location-dot" style="padding: 0px 10px 10px;"></i>
+          <h5>Delivery to Pincode-<span>0</span></h5>
+         </div>
+         <div>
+          <img src="https://images.apollo247.in/images/expressIcon.png" >
+          <h5>Within 4 hours</h5>
+         </div>
+         <div>
+         <select id="Qty">
+          <option value="1">1 Qty</option>
+          <option value="2">2 Qty</option>
+          <option value="3">3 Qty</option>
+          <option value="4">4 Qty</option>
+          <option value="5">5 Qty</option>
+          <option value="6">6 Qty</option>
+          <option value="7">7 Qty</option>
+          <option value="8">8 Qty</option>
+          <option value="9">9 Qty</option>
+          <option value="10">10 Qty</option>
+         </select>
+        </div>
+         <div>
+         <button id="ATC_PD">ADD TO CART</button>
+        </div>
+         </div>
+    </div>
+</body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+<script type="text/javascript" src="../YourPharmacy/script/Product_Det.js"></script>
+	<script type="text/javascript">
+		var l = $('#target').zoom(2);
+
+		$('input[type="range"]').on('change', function () {
+
+			l.setZoom(this.value);
+
+		});
+	</script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
