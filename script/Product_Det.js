@@ -1,3 +1,15 @@
+// import Display_Prod from "../components/product_imp.js";
+//  import navbar from "../components/navbar.js"
+
+// import footer from "../components/footer.js"
+
+// let FootC=document.getElementById("footMain");
+//  FootC.innerHTML=footer();
+
+// let Nav_Cont=document.getElementById("Nav");
+//  Nav_Cont.innerHTML=navbar();
+
+
 var Arr_PD=JSON.parse(localStorage.getItem("Product_Detail"));
 
 var Arr=[];
@@ -32,12 +44,17 @@ function Display_PD(){
      document.getElementById("Ingredient").textContent=Key_Ingredient;
 
 	 var P_Off=document.getElementById("MRP");
-     P_Off.textContent=`MRP ${Price_off}`
+     P_Off.textContent=`MRP ₹${Price_off}`
+	 P_Off.style.color="#00516b"
+	 P_Off.style.fontWeight="550"
 	 P_Off.style.textDecoration="line-through"
+
 	
 
 	var Pri= document.getElementById("PD_Price")
-	 Pri.textContent=`₹${Price}`;
+	 Pri.textContent=`Price : ₹${Price}`;
+	 Pri.style.color="#00516b"
+	 Pri.style.fontWeight="550"
 
 
 	 var Off=Math.round((Price/Price_off)*100);
@@ -47,10 +64,32 @@ function Display_PD(){
 	 Disc.style.color="#23b28d"
 	 Disc.style.fontWeight="600"
 
+
+	 var ADDTOCART=document.getElementById("ATC_PD");
+	 ADDTOCART.addEventListener("click",function(){
+		Add_on_cart(img_url, Price, Price_off, title)
+	 })
    })
 }
 
-// <------------------------- Zoom ---------------------->
+
+
+let Add_Cart=JSON.parse(localStorage.getItem("Cart"))||[];
+
+function Add_on_cart(img_url, Price, Price_off, title){
+	 var obj={
+	  img:img_url,
+	  Price:Price,
+	  Price_off:Price_off,
+	  title:title
+	 }
+	 console.log(obj)
+	 Add_Cart.push(obj);
+	 localStorage.setItem("Cart",JSON.stringify(Add_Cart));
+	 window.location.href="cart.html"
+}
+
+// <-------------------------  Zoom Effect For Product Detail Page  ---------------------->
 (function () {
 
 	if (typeof $ !== "function")
@@ -151,6 +190,8 @@ document.getElementById("Show_PC").addEventListener("click",Show_Pin)
 function Show_Pin(){
 	var SAC=document.getElementById("Pop_up");
 	SAC.style.visibility="visible";
+	// SAC.style.backgroundColor="red";
+// document.getElementById("PD_main_Container").style.filter="blur(1px)"
 }
 
 document.getElementById("Close_pop").addEventListener("click",Closed_POP);
@@ -158,4 +199,5 @@ document.getElementById("Close_pop").addEventListener("click",Closed_POP);
 function Closed_POP(){
 	var SAC=document.getElementById("Pop_up");
 	SAC.style.visibility="hidden";
+	// document.getElementById("PD_main_Container").style.filter="none"
 }

@@ -24,13 +24,9 @@
   margin-bottom: 50px;
 }
 
-#Recm p{
-    font-size: 25px;
-}
-
-#Recm #Prod{
-    font-size: 70px;
-    margin-top: -30px;
+#Recm {
+   /* border: 2px solid ; */
+   margin-top: 70px;
 }
 
 
@@ -46,8 +42,8 @@
 }
 
 #Left_side{
-    background: #f5f5f5;
-    height: 900px;
+    background:#b9e6f9;
+    height:fit-content;
 }
 
 /* <------------------- Style for Filter Product--------------------> */
@@ -67,6 +63,14 @@
 
 .opt p{
     padding-right:30px ;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00516b;
+}
+
+.opt p:hover{
+    color: orange;
+    cursor: pointer;
 }
 
 /* <-------------------- */
@@ -146,12 +150,14 @@
 #Pri p{
     padding: 0px;
     margin: 0px;
+    color: #00516b;
 }
 
 #Right_side h4{
     text-align: center;
     /* border: 1px solid; */
     margin-bottom: 10px;
+    
 }
 
 #Img{
@@ -170,6 +176,7 @@
     margin: 10px 0px 10px 15px;
     border:none;
     border-radius: 10px;
+
 }
 
 .ATC:hover{
@@ -219,6 +226,7 @@
 #citynames{border: 1px solid rgb(124, 122, 122); width: 100%; margin: auto;
     height: 200px; overflow-y: scroll; margin-top: 0px; border: none;
     margin-right: 20%;
+    color: #00516b;
 }
 
 #B_Search{
@@ -230,7 +238,10 @@
     border: none;
     background: #f5f5f5;;
     border-bottom: 2px solid rgb(215, 213, 211);
-    
+    background:#b9e6f9;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
 }    
 
 #B_Search:focus{

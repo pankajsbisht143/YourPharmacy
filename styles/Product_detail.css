@@ -11,15 +11,23 @@ body{
    background-color: #fafafa;
    padding: 10px;
    border-bottom: 1px solid gray;
+   padding-left: 30px;
 }
  
 #PD_Tag h4{
     padding: 10px;
+    color: #00516b;
+    font-weight: 650;
+    font-size: 22px;
 }
 
 
 #PD_main_Container{
     display: flex;
+    /* border: 2px solid red; */
+    width: 95%;
+    margin: auto;
+    gap: 20px;
 }
 
 
@@ -49,12 +57,31 @@ body{
     background-color: #fafafa;
 }
 
+#PD_bottom h5{
+    color: #00516b;
+    font-weight: 650;
+    font-size: 22px;
+}
+
+#PD_bottom p{
+    color: #00516b;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#PD_bottom h3{
+    color: #00516b;
+    font-weight: 600;
+    font-size: 30px;
+}
+
 #PD_Right{
     border: 2px solid gray;
     border-radius: 10px;
     height: fit-content;
-    margin-left: 20px;
+ 
     background-color: #fafafa;
+    
 }
 
 
@@ -64,7 +91,7 @@ body{
     width: 400px;
     margin-left: 20px;
     align-items: center;
-    padding: 10px 10px;
+    padding: 5px 10px;
 }
 
 #PD_Right div i{
@@ -76,7 +103,9 @@ body{
 }
 
 #PD_Right #ATC_PD{
-    padding: 15px;
+    padding:15px 0px;
+    margin: 0px 0px;
+    /* float: left; */
     width: 100%;
     border-radius: 10px;
     background: #fc9916;
@@ -85,6 +114,12 @@ body{
     font-weight: 600;
 }
 
+#BTN {
+    /* border: 2px solid green; */
+   
+    margin: 10px 0px;
+    margin-right: 20px;
+}
 
 
 /*<---------------------- carousel Styling------------------------> */
@@ -117,17 +152,44 @@ body{
     border: 5px solid;
 }
 
+/* <----------------------- End Here------------------------> */
+
+/* <----------------------------- Display Product  Top Div Styling ------------------> */
+
+#NR_Tag{
+    font-size: 20px;
+    color: #00525d;
+    font-weight: 600;
+  }
+
+  #Pr_Title{
+    font-size: 25px;
+    color: #00525d;
+    font-weight: 700;
+  }
+
+  #Mfg{
+    font-size: 20px;
+    color: #027a8a;
+    font-weight: 600;
+  }
+
+  /* <---------------------- End Here-----------------------------------------> */
+
+
+
 /* <----------------------- Enter PIN Code POP (All the style along with Right side Box)-----------------> */
 
 #Pop_up{
     width: 500px;
-    /* border: 1px solid; */
-    /* height: 340px; */
+    /* border: 1px solid red;
+    height: 340px; */
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
     visibility: hidden;
+    /* display: none; */
     transition: transform 0.4s,top 0.4s;
     text-align: center;
     padding: 20px 30px;
@@ -180,6 +242,12 @@ body{
     color: #00525d; 
   }
 
+  #Qty{
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00525d; 
+  }
 
 
 

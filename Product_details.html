@@ -10,24 +10,10 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <style>
-      #NR_Tag{
-        font-size: 20px;
-        color: #00525d;
-        font-weight: 600;
-      }
-
-      #Pr_Title{
-        font-size: 25px;
-        color: #00525d;
-        font-weight: 700;
-      }
-
-      #Mfg{
-        font-size: 20px;
-        color: #027a8a;
-        font-weight: 600;
-      }
+      
+    
 
       /* <--------------------Styling For Zoom */
       /* * {
@@ -116,6 +102,7 @@
     </style>
 </head>
 <body>
+  <div id="Nav"></div>
   <div id="Pop_up">
     <div id="POP_Top">
     <h1 style="text-align: left;">
@@ -127,7 +114,7 @@
     <br>
     <button id="Sub_Pin">Submit</button>
   </div>
-    <div id="PD_main_Container">
+  <div id="PD_main_Container">
         <div id="PD_Left">
             <div id="PD_Tag">
                 <i class="fa-solid fa-arrow-trend-up"></i>
@@ -228,17 +215,17 @@
         </div>
          <div id="PD_Right">
           <div>
-            <h3>Price :<span id="PD_Price">0</span></h3>
+            <h3 id="PD_Price">0</h3>
             <h5 id="MRP" style="padding: 10px;">0</h5>
             <h5 id="Discount">0</h5>
           </div>
          <div id="Show_PC">
           <i class="fa-solid fa-location-dot" style="padding: 0px 10px 10px;"></i>
-          <h5>Delivery to Pincode-<span id="PIN">_ _ _</span></h5>
+          <h5 style="color: #00516b; font-weight: 600;">Delivery to Pincode-<span id="PIN">_ _ _</span></h5>
          </div>
          <div>
           <img src="https://images.apollo247.in/images/expressIcon.png" >
-          <h5>Within 4 hours</h5>
+          <h5 style="color: #00516b; font-weight: 600;">Within 4 hours</h5>
          </div>
          <div>
          <select id="Qty">
@@ -254,18 +241,20 @@
           <option value="10">10 Qty</option>
          </select>
         </div>
-         <div>
+         <div id="BTN">
          <button id="ATC_PD">ADD TO CART</button>
         </div>
          </div>
     </div>
+    <!-- Footer -->
+    <div id="footMain"></div>
 </body>
 </html>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 
-<script type="text/javascript" src="../YourPharmacy/script/Product_Det.js"></script>
+<script type="text/javascript" src="../YourPharmacy/script/Product_Det.js" ></script>
 	<script type="text/javascript">
 		var l = $('#target').zoom(2);
 

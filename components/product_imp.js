@@ -20,6 +20,7 @@ const Display_Prod = (P_data,Container,url) => {
   
       var Title = document.createElement("h4");
       Title.setAttribute("class", "Title");
+      Title.style.color="#155a5f"
       Title.textContent = title;
   
       var P_Div = document.createElement("div");
