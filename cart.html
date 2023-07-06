@@ -218,7 +218,7 @@
     function decrement(p) {
       if(c>1){
         c--;
-        document.getElementById("count").innerHTML = c;
+        document.getElementById("count"+p).innerHTML = c;
         decre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
         global_order -= decre_cost
         order.innerHTML = (global_order);
