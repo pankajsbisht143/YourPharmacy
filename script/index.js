@@ -1,20 +1,20 @@
 import navbar from "../components/navbar.js";
 import footer from "../components/footer.js";
 
-let navbarC=document.getElementById('navbar');
-navbarC.innerHTML=navbar();
+let navbarC = document.getElementById('navbar');
+navbarC.innerHTML = navbar();
 
-let footerMain=document.getElementById("footerMain");
-footerMain.innerHTML=footer();
+let footerMain = document.getElementById("footerMain");
+footerMain.innerHTML = footer();
 
 
 
-document.getElementById("open").addEventListener('click',()=>{
-    document.querySelector("#menunavbar").style.display="block";
+document.getElementById("open").addEventListener('click', () => {
+  document.querySelector("#menunavbar").style.display = "block";
 })
 
-document.getElementById("close").addEventListener('click',()=>{
-    document.querySelector("#menunavbar").style.display="none";
+document.getElementById("close").addEventListener('click', () => {
+  document.querySelector("#menunavbar").style.display = "none";
 })
 
 
@@ -52,3 +52,42 @@ btn[3].onclick = function () {
   }
   this.classList.add("active");
 };
+
+
+
+let inputTag = document.getElementById("Search");
+
+
+let p = document.getElementById('Search')
+p.addEventListener('keypress', () => {
+  debouncingFunction(fetchFunction, 1000);
+
+})
+
+let id;
+function debouncingFunction(fetchFunction, delay) {
+  if (id) {
+    clearTimeout(id);
+  }
+
+  id = setTimeout(() => {
+    fetchFunction()
+
+  }, delay)
+}
+
+let fetchFunction=async()=>{
+  try{
+    let res=await fetch(`http://localhost:3000/Random?q=${inputTag.value}`);
+    let data=await res.json();
+    console.log(data);
+    display(data);
+  }catch(err){
+    console.log(err);
+  }
+}
+
+
+document.getElementById("btn1").addEventListener('click',()=>{
+  window.location.href="Product.html"
+})
