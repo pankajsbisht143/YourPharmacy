@@ -30,6 +30,23 @@ function Display_PD(){
      document.getElementById("Benifit").textContent=Key_Benifit;
 
      document.getElementById("Ingredient").textContent=Key_Ingredient;
+
+	 var P_Off=document.getElementById("MRP");
+     P_Off.textContent=`MRP ${Price_off}`
+	 P_Off.style.textDecoration="line-through"
+	
+
+	var Pri= document.getElementById("PD_Price")
+	 Pri.textContent=`₹${Price}`;
+
+
+	 var Off=Math.round((Price/Price_off)*100);
+
+	 var Disc=document.getElementById("Discount");
+	 Disc.textContent=`${Off}%OFF`
+	 Disc.style.color="#23b28d"
+	 Disc.style.fontWeight="600"
+
    })
 }
 
@@ -115,3 +132,30 @@ function Display_PD(){
 	});
 
 }());
+
+document.getElementById("Sub_Pin").addEventListener("click",Submit_pin)
+
+function Submit_pin(){
+	var PIN=document.getElementById("Enter_Pin").value;
+	
+	document.getElementById("PIN").textContent=PIN;
+	PIN.style.color="#00525d";
+	PIN.style.fontWeight="600"
+}
+
+
+document.getElementById("Show_PC").addEventListener("click",Show_Pin)
+
+
+
+function Show_Pin(){
+	var SAC=document.getElementById("Pop_up");
+	SAC.style.visibility="visible";
+}
+
+document.getElementById("Close_pop").addEventListener("click",Closed_POP);
+
+function Closed_POP(){
+	var SAC=document.getElementById("Pop_up");
+	SAC.style.visibility="hidden";
+}

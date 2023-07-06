@@ -52,15 +52,16 @@ body{
 #PD_Right{
     border: 2px solid gray;
     border-radius: 10px;
-    height: 315px;
+    height: fit-content;
     margin-left: 20px;
+    background-color: #fafafa;
 }
 
 
 #PD_Right div{
     /* border: 2px solid rebeccapurple; */
     display: flex;
-    width: 500px;
+    width: 400px;
     margin-left: 20px;
     align-items: center;
     padding: 10px 10px;
@@ -116,8 +117,68 @@ body{
     border: 5px solid;
 }
 
+/* <----------------------- Enter PIN Code POP (All the style along with Right side Box)-----------------> */
+
+#Pop_up{
+    width: 500px;
+    /* border: 1px solid; */
+    /* height: 340px; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+    text-align: center;
+    padding: 20px 30px;
+    background-color:#ffffff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+    color: rgb(14, 8, 8);
+     color: #00525d; 
+  }
+
+  #Pop_up h5{
+    text-align: left;
+  }
+
+  #POP_Top{
+    display: flex;
+    /* border: 2px solid; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
 
 
+  #Enter_Pin{
+    border: none;
+    border-bottom:2px solid green;
+   padding: 5px 0px;
+   font-size: 20px;
+    width: 100%;
+    background-color:#ffffff;
+    margin: 5px 0px 20px;
+  }
+
+ #Enter_Pin:focus{
+   outline: none;
+  }
+
+  #Sub_Pin{
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background: #fdcc8a;
+    border: none;
+    border-radius: 10px;
+  }
+
+  #PIN{
+    font-size: 20px;
+    font-weight: 700;
+    color: #00525d; 
+  }
 
 
 

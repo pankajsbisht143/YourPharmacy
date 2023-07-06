@@ -116,6 +116,17 @@
     </style>
 </head>
 <body>
+  <div id="Pop_up">
+    <div id="POP_Top">
+    <h1 style="text-align: left;">
+      Hi! :)</h1>
+      <h1><i class="fa-solid fa-xmark" id="Close_pop"></i></h1>  
+    </div>
+    <h5>Allow us to serve you better by entering your delivery pincode below.</h5>
+    <input id="Enter_Pin" type="text" placeholder="Enter pincode here">
+    <br>
+    <button id="Sub_Pin">Submit</button>
+  </div>
     <div id="PD_main_Container">
         <div id="PD_Left">
             <div id="PD_Tag">
@@ -218,12 +229,12 @@
          <div id="PD_Right">
           <div>
             <h3>Price :<span id="PD_Price">0</span></h3>
-            <h4 id="MRP" style="padding: 10px;">0</h4>
-            <h4 id="Discount">0</h4>
+            <h5 id="MRP" style="padding: 10px;">0</h5>
+            <h5 id="Discount">0</h5>
           </div>
-         <div>
+         <div id="Show_PC">
           <i class="fa-solid fa-location-dot" style="padding: 0px 10px 10px;"></i>
-          <h5>Delivery to Pincode-<span>0</span></h5>
+          <h5>Delivery to Pincode-<span id="PIN">_ _ _</span></h5>
          </div>
          <div>
           <img src="https://images.apollo247.in/images/expressIcon.png" >
