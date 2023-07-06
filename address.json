@@ -1,3 +1,37 @@
 {
-  "address": []
+  "address": [
+    {
+      "firstName": "Ashutosh",
+      "lastName": "Kumawat",
+      "number": "9785224671",
+      "pincode": "332404",
+      "address": "Kumawat Mohalla",
+      "city": "Sikar",
+      "state": "Rajasthan",
+      "locality": "Rinags",
+      "id": 2
+    },
+    {
+      "firstName": "Saif",
+      "lastName": "Khan",
+      "number": "867695750",
+      "pincode": "374634",
+      "address": "near railway",
+      "city": "kanpur",
+      "state": "UP",
+      "locality": "kanpur",
+      "id": 8
+    },
+    {
+      "firstName": "Ashutosh",
+      "lastName": "Kumawat",
+      "number": "8575485485",
+      "pincode": "346358",
+      "address": "Near Railway Station",
+      "city": "Sikar",
+      "state": "Rajasthan",
+      "locality": "Ringas",
+      "id": 9
+    }
+  ]
 }
