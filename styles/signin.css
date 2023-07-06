@@ -1,10 +1,10 @@
 body{
     background-image: url('https://daryo.uz/static/pills.webp');
 }
-form{
-    height: 500px;
+form {
+    height: 470px;
     width: 400px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.249);
     box-shadow: 0 0px 10px black;
     position: absolute;
     left: 0px;
@@ -13,8 +13,20 @@ form{
     bottom: 0px;
     margin: auto;
     padding: 2%;
+    border-radius: 6px;
+  }
+label,h4{
+    color: white;
+    text-align: center;
 }
-label{
+a{
+    color: #0087ff
+}
+h2,h1{
+    color: white;
+    text-align: center;
+}
+h1,p{
     color: white;
 }
 form>div{
@@ -22,7 +34,72 @@ form>div{
     flex-direction: column;
 }
 #login{
+    /* display: flex;
+    justify-content: center;
+    margin: auto; */
+    display: block;
+    color: white;
+    background-color: #0171d3;
+    border: none;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: auto;
+    width: 80%;
+}
+
+form input {
+    height: 30px;
+    width: 80%;
+margin: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 0 0  0 10px;
+}
+form input:focus{
+    outline: none;
+}
+#google,#microsoft{
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: auto;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    width: 80%;
 }
+#Facebook{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 30px;
+    background-color: #4267b2;
+    border-radius: 6px;
+    border: none;
+    width: 80%;
+}
+#Facebook h5{
+    color: white;
+}
+#google h5,#microsoft h5{
+    color: #53565b;
+}
+
+#Line{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+   #Line>div{
+     border: 1px solid white;
+     width: 200px;
+     height: 0px;
+   }
