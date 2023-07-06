@@ -1,7 +1,15 @@
 var Container = document.getElementById("Right_side");
 
 import Display_Prod from "../components/product_imp.js";
+import navbar from "../components/navbar.js"
 
+import footer from "../components/footer.js"
+
+let FootC=document.getElementById("footMain");
+FootC.innerHTML=footer();
+
+let Nav_Cont=document.getElementById("Nav");
+Nav_Cont.innerHTML=navbar();
 
 var Pre = document.getElementById("Prev");
 Pre.addEventListener("click", previous);
@@ -31,8 +39,9 @@ const Random_Fetch = async () => {
     let P_Resp = await fetch(`http://localhost:3000/Random?_page=${page}&_limit=15`);
     let P_Data = await P_Resp.json();
 
+
     total_page = Math.ceil(P_Resp.headers.get('X-Total-Count') / 15);
-    // document.getElementById("Page_No").textContent = total_page;
+    document.getElementById("Page_No").textContent = page;
     console.log(total_page);
     console.log(P_Data);
 
@@ -52,7 +61,7 @@ function previous() {
   }
   page--;
   Random_Fetch();
-  fetch_Supp()
+  // fetch_Supp()
 }
 
 function next() {
@@ -61,7 +70,7 @@ function next() {
   }
   page++;
   Random_Fetch();
-  fetch_Supp()
+  // fetch_Supp();
 }
 
 // <----------------------Fetch Suppliment data----------------->
@@ -85,7 +94,7 @@ async function fetch_Supp(){
         let Su_Data = await Su_Resp.json();
     
         total_page = Math.ceil(Su_Resp.headers.get('X-Total-Count') / 15);
-        // document.getElementById("Page_No").textContent = total_page;
+        document.getElementById("Page_No").textContent = page;
         console.log(total_page);
         console.log(Su_Data);
         Sort_Data=Su_Data;
