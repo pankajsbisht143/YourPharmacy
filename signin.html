@@ -9,7 +9,7 @@
   </head>
   <body>
     <form action="">
-      <h1>Hello, Friend!</h1>
+      <h1>Welcome!</h1>
       <!-- <p>Enter your personal details <br> & start journy with us.</p> -->
       <button id="logout" style="display: none;">Logout<i class="fa-solid fa-envelope"></i></button>
       <div>
@@ -21,11 +21,12 @@
         <input id="password" type="text" placeholder="Password" />
       </div>
       <button type="button" id="login">Login </button>
+      <p id="error"></p>
       <h4>Don't have an account?<a href="./signup.html">Signup</a></h4>
       <div style="margin-top: -15px;">
       <div id="Line">
         <div></div>
-        <h4>Or </h4>
+        <p>Or </p>
         <div></div>
       </div>
     </div>
@@ -76,8 +77,9 @@
         // Signed in
         const user = userCredential.user;
         console.log(user);
-        alert("Login Successfully");
+        document.querySelector("#error").style.display="none";
         document.querySelector("#logout").style.display="block";
+        alert("Login Successfully");
         location.href="./index.html"
         
         // ...
@@ -85,7 +87,9 @@
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-      alert("You entered the wrong email id or password");
+        console.log(errorMessage)
+        document.querySelector("#error").style.display="block";
+        document.querySelector("#error").innerText=`Error ${errorMessage}`;
     });
   });
 

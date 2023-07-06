@@ -9,30 +9,33 @@
   </head>
   <body>
     <form action="">
-      <h2>Happy to see you</h2>
-      <div id="inputbox">
+      <h1>Hello, Friend! <br> Happy to see you</h1>
+      <!-- <div id="inputbox">
         <input id="username" type="text" placeholder="Enter Your username" />
+      </div> -->
+      <div id="inputbox">
+        <input id="mailid" type="email" placeholder="Email" />
       </div>
       <div id="inputbox">
-        <input id="mailid" type="text" placeholder="Enter Your Mail Id" />
-      </div>
-      <div id="inputbox">
-        <input id="phoneno" type="text" placeholder="Enter Your phone No" />
+        <input id="password1" type="text" placeholder="Password" />
       </div>
       <div id="inputbox">
         <input
-          autocomplete="on"
+        autocomplete="on"
           id="password"
           type="text"
-          placeholder="Enter"
-        />
+          placeholder="Confirm Password"
+       required>
       </div>
       <button type="button" id="signup">Signup</button>
-      <h4>Don't have an account?<a href="./signin.html">Signin</a></h4>
+      <p id="success">You have registered Successfully</p>
+      <p id="error">*Please fill out all the field </p>
+
+      <h4>Already have an account?<a href="./signin.html">Signin</a></h4>
       <div style="margin-top: -15px;">
         <div id="Line">
           <div></div>
-          <h4>Or </h4>
+          <p>Or </p>
           <div></div>
         </div>
       </div>
@@ -49,3 +52,22 @@
   </body>
 </html>
 <script type="module" src="../script/signup.js"></script>
+
+
+<!-- <div id="inputbox">
+  <input id="username" type="text" placeholder="Enter Your username" />
+</div>
+<div id="inputbox">
+  <input id="mailid" type="email" placeholder="Enter Your Mail Id" />
+</div>
+<div id="inputbox">
+  <input id="phoneno" type="text" placeholder="Enter Your phone No" />
+</div>
+<div id="inputbox">
+  <input
+    autocomplete="on"
+    id="password"
+    type="text"
+    placeholder="Enter Your Password"
+ required>
+</div> -->

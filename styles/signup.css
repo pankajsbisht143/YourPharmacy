@@ -15,7 +15,7 @@ form {
   padding: 2%;
   border-radius: 6px;
 }
-label,h4{
+h4{
   color: white;
   text-align: center;
 }
@@ -26,8 +26,20 @@ h2,h1{
   color: white;
   text-align: center;
 }
-h1,p{
+h1,div ~ p{
   color: white;
+}
+#success{
+  display: none;
+  width:80% ;
+  margin: auto;
+  color: green;
+}
+#error{
+  display: none;
+  width:80% ;
+  margin: auto;
+  color: red;
 }
 form>div{
   display: flex;

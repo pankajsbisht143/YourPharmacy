@@ -28,24 +28,29 @@ console.log(app);
 const auth = getAuth(app);
 
 document.querySelector("#signup").addEventListener("click", () => {
-  let username = document.querySelector("#username").value;
+  // let username = document.querySelector("#username").value;
   let email = document.querySelector("#mailid").value;
-  let phoneno = document.querySelector("#phoneno").value;
+  let password1 = document.querySelector("#password1").value;
   let password = document.querySelector("#password").value;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+  createUserWithEmailAndPassword(auth, email, password && password1)
+  .then((userCredential) => {
+      event.preventDefault()
       // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        document.querySelector("#error").style.display="none";
+        document.querySelector("#success").style.display="block";
 
-      const user = userCredential.user;
-      console.log(user);
-      alert("Register successfully");
-      location.href = "signin.html";
-      // ...
+        alert("Register successfully");
+        location.href = "signin.html";
+        // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      document.querySelector("#success").style.display="none";
+      document.querySelector("#error").style.display="block";
       // ..
     });
 });

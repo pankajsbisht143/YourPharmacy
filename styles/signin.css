@@ -29,6 +29,12 @@ h2,h1{
 h1,p{
     color: white;
 }
+#error{
+    display: none;
+    width:80% ;
+    margin: auto;
+    color: red;
+  }
 form>div{
     display: flex;
     flex-direction: column;
