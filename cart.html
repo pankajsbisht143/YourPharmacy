@@ -13,6 +13,9 @@
             /* gap: 20px; */
             padding: 20px;
         }
+        .table{
+          margin-bottom: 0px;
+        }
         .card2{
             /* margin: auto; */
             background-color: #d1e7dd;
@@ -25,6 +28,9 @@
             justify-content: space-between;
             align-items: baseline;
         }
+        /* .card-body{
+          font-size: ;
+        } */
         #updation{
             display: flex;
             justify-content: space-evenly;
@@ -32,6 +38,9 @@
         }
         .img-thumbnail{
           max-width: 65%;
+        }
+        #parent{
+          margin: 3rem 9rem;
         }
         tbody>tr>td{
           width: 40%;
@@ -80,8 +89,8 @@
   <body>
    
     <div id="liveAlertPlaceholder"></div>
-   <div class="container mt-5" id="parent">
-    <div class="input-group mb-3"style="width: 25rem;">
+   <div class="container" id="parent">
+    <div class="input-group mb-3"style="width: 27rem;">
         <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
         <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
       </div>
@@ -113,31 +122,31 @@
                   </tbody>
             </table> -->
         </div>
-        <div class="card card2" id="c_2" style="width: 25rem;" class="">
+        <div class="card card2 fs-5" id="c_2" style="width: 25rem;" class="">
             <div class="card-body">
-              <h5 class="card-title">Summary</h5>
+              <h5 class="card-title  fs-3">Summary</h5>
               <div>
-                  <p class="card-text">Total Items</p>
-                  <p class="card-text" id="total_item">1</p>
+                  <p class="card-text mt-2">Total Items</p>
+                  <p class="card-text mt-2" id="total_item">1</p>
               </div>
               <div>
-                <p class="card-text">order total</p>
-                <p class="card-text" id="order"></p>
+                <p class="card-text mt-2">order total</p>
+                <p class="card-text mt-2" id="order"></p>
             </div>
               <div>
-                <p class="card-text">Promo Code</p>
-                <p class="card-text" id="promo_html">#####</p>
+                <p class="card-text mt-2">Promo Code</p>
+                <p class="card-text mt-2" id="promo_html">#####</p>
             </div>
             <div>
-                <p class="card-text">Shiping</p>
-                <p class="card-text">150</p>
+                <p class="card-text mt-2">Shiping</p>
+                <p class="card-text mt-2">150</p>
             </div>
                 <div class="card-footer mb-3">
-                    <p class="card-text"> <b>Total</b></p>
+                    <p class="card-text fs-4"> <b>Total</b></p>
                     <p class="card-text" id="total"></p>
               </div>
             <div>
-                <a href="#" style="background-color: #00525d;" class="btn btn-primary d-block mx-auto">Purchase</a>
+                <a href="form.html" style="background-color: #00525d;" id="purchase" class="btn btn-primary d-block mx-auto">Purchase</a>
 
             </div>
 
@@ -151,7 +160,6 @@
   </body>
 </html>
 <script>
-        
     let get_items = JSON.parse(localStorage.getItem("Cart"));
     display(get_items)
     function display(get_items) {
@@ -163,11 +171,11 @@
             <tr>
               <th scope="row">${i+1}</th>
               <td> <div>
-                <img src=${e.img_url} class="img-thumbnail" alt="img"></div></td>
-                <td>${e.title_sh}</td>
-                <td>${e.Price}</td>
+                <img src=${e.img} class="img-thumbnail" alt="img"></div></td>
+                <td>${e.title}</td>
+                <td>${e.Price}₹</td>
                 <td id=""><button onclick="increment(${i})">&#43;</button></td>
-                <td><p id="count">1</p></td>
+                <td><p id="count${i}">1</p></td>
                 <td id=""><button onclick="decrement(${i})">&#8722;</button></td>
                 <td><button type="button" onclick="del(get_items,${i})" class="btn-close" aria-label="Close"></button></td>
                 </tr>
@@ -186,14 +194,21 @@
     
     let order = document.getElementById("order")
     let total = document.getElementById("total")
+    let obj = {
+      dis_price:0,
+      price:0
+
+    }
+    // -------------------------------
     let global_order = 0
-    let discountVal = global_order+150;
+    let discountVal = 0;
     let incre_cost = 0
     let decre_cost = 0
+    let set_arr = []
     let c = 1;
     function increment(p) {
         c++;
-      document.getElementById("count").innerHTML = c;
+      document.getElementById("count"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
         global_order += incre_cost
         order.innerHTML = (global_order);
@@ -222,6 +237,8 @@
         total_order+=parseFloat(e.Price.replace("₹" , ""));
       });
       global_order += total_order
+      obj.price = total_order
+      set_arr.push(obj)
       order.innerHTML = (total_order);
       if(arr.length === 0){
         total.innerHTML = 0
@@ -252,7 +269,12 @@
       if(getVal === "masai123" || getVal === "saifkhan"){
         appendAlert("congrats 🥳 You got 20% discount" , "success")
         document.getElementById("promo_html").innerHTML = getVal;
+        // ---------------------
       let discount = global_order - (global_order * 0.20);
+      discountVal = discount
+      obj.dis_price = discount
+      // console.log(set_arr);
+      console.log(set_arr);
       total.innerHTML = discount+150;
     }else{
             appendAlert("Sorry! Promocode does not exits 😓" , "danger")
@@ -270,5 +292,9 @@
       total_item.innerHTML = r.length;
       order_func(r)
     }
-
+    document.getElementById("purchase").addEventListener("click" , ()=>{
+        localStorage.setItem("prices" , JSON.stringify(set_arr) )
+    })
+    console.log(set_arr);
+    console.log(obj);
 </script>
