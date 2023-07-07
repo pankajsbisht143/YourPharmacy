@@ -28,12 +28,12 @@ console.log(app);
 const auth = getAuth(app);
 
 document.querySelector("#signup").addEventListener("click", () => {
-  // let username = document.querySelector("#username").value;
+  let username = document.querySelector("#username").value;
   let email = document.querySelector("#mailid").value;
   let password1 = document.querySelector("#password1").value;
   let password = document.querySelector("#password").value;
 
-  createUserWithEmailAndPassword(auth, email, password && password1)
+  createUserWithEmailAndPassword(auth, email, password && username && password1 )
   .then((userCredential) => {
       event.preventDefault()
       // Signed in
@@ -41,7 +41,7 @@ document.querySelector("#signup").addEventListener("click", () => {
         console.log(user);
         document.querySelector("#error").style.display="none";
         document.querySelector("#success").style.display="block";
-
+        localStorage.setItem("username",JSON.stringify(username));
         alert("Register successfully");
         location.href = "signin.html";
         // ...
@@ -66,6 +66,7 @@ document.querySelector("#google").addEventListener("click", () => {
       // The signed-in user info.
       const user = result.user;
       console.log(user);
+      localStorage.setItem("username",user.displayName);
       alert("Signup Successfully");
       location.href = "./index.html";
       // IdP data available using getAdditionalUserInfo(result)
