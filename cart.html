@@ -6,6 +6,9 @@
     <title>Cart  Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
+       body{
+        background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+      }
         #main{
             /* background-color: #fff; */
             display: grid;
@@ -18,9 +21,11 @@
         }
         .card2{
             /* margin: auto; */
-            background-color: #d1e7dd;
+            background-color: #a4cfee3b;
             position: fixed;
-            left:60rem
+            left:60rem;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
         }
         .card-body>div{
@@ -94,7 +99,7 @@
         <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
         <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
       </div>
-    <div class="" class="" id="main" >
+    <div class="card" class="" id="main" >
         <div class="card card1" id="c_1">
             <!-- <table class="table table-striped">
                 <thead>
@@ -122,28 +127,28 @@
                   </tbody>
             </table> -->
         </div>
-        <div class="card card2 fs-5" id="c_2" style="width: 25rem;" class="">
+        <div class="card card2 fs-5" id="c_2" style="width: 25rem;">
             <div class="card-body">
               <h5 class="card-title  fs-3">Summary</h5>
               <div>
                   <p class="card-text mt-2">Total Items</p>
-                  <p class="card-text mt-2" id="total_item">1</p>
+                  <p class="card-text mt-2 fw-bold" id="total_item">1</p>
               </div>
               <div>
                 <p class="card-text mt-2">order total</p>
-                <p class="card-text mt-2" id="order"></p>
+                <p class="card-text mt-2 fw-bold" id="order"></p>
             </div>
               <div>
                 <p class="card-text mt-2">Promo Code</p>
-                <p class="card-text mt-2" id="promo_html">#####</p>
+                <p class="card-text fw-bold mt-2" id="promo_html">#####</p>
             </div>
             <div>
                 <p class="card-text mt-2">Shiping</p>
-                <p class="card-text mt-2">150</p>
+                <p class="card-text fw-bold mt-2">150</p>
             </div>
                 <div class="card-footer mb-3">
-                    <p class="card-text fs-4"> <b>Total</b></p>
-                    <p class="card-text" id="total"></p>
+                    <p class="card-text fs-4"> <i>Total</i></p>
+                    <p class="card-text fw-bold" id="total"></p>
               </div>
             <div>
                 <a href="form.html" style="background-color: #00525d;" id="purchase" class="btn btn-primary d-block mx-auto">Purchase</a>
@@ -196,7 +201,7 @@
     let total = document.getElementById("total")
     let obj = {
       dis_price:0,
-      price:0
+      price:0,
 
     }
     // -------------------------------
