@@ -92,9 +92,12 @@ addAddress.addEventListener("click",function(){
 //     e.preventDefault();
 // }
 
-// document.getElementById('payment_btn'){
-//     location.href = "./overview.html";
-// }
+let cont_btn =  document.getElementById("payment_btn");
+
+cont_btn.addEventListener("click",function(){
+    location.href = "./overview.html";
+})
+    
 
 
 
