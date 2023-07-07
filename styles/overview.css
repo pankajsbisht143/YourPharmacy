@@ -87,3 +87,30 @@
     margin: 23px 12px 19px 12px;
     border-radius: 11px 1px 12px 2px;
   }
+
+  #PRODUCT_DIV > div{
+    border-bottom: 1px solid lightslategray;
+    margin-bottom: 13px;
+  }
+
+  #PRODUCT_DIV p{
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  #ADDR_DIV p {
+    font-weight: bold;
+  }
+
+  #ADDR_DIV h3 {
+    font-weight:bolder;
+  }
+
+  /* .given_img{
+    /* width: 200px; */
+
+  /* }  */
+
+  .given_img img{
+    width: 200px;
+  }
