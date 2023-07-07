@@ -92,8 +92,41 @@ addAddress.addEventListener("click",function(){
 //     e.preventDefault();
 // }
 
-// document.getElementById('payment_btn'){
-//     location.href = "./overview.html";
-// }
+let cont_btn =  document.getElementById("payment_btn");
+
+cont_btn.addEventListener("click",function(){
+    location.href = "./overview.html";
+})
+    
+
+
+
+
+let myPrice = JSON.parse(localStorage.getItem("prices"));
+
+console.log(myPrice);
+displayPrices(myPrice);
+
+function displayPrices(data){
+    data.forEach(function(elem){
+        let Tprice = document.getElementById("myID1");
+        Tprice.innerText = elem.price;
+
+        let TAPrice = document.getElementById("myID3");
+        if(0<elem.dis_price){
+            TAPrice.innerText = elem.dis_price;
+        }else{
+            TAPrice.innerText = elem.price;
+        }
+        
+        let DisPrice = document.getElementById("myID2");
+        if(0<elem.dis_price){
+            DisPrice.innerText = `-${(elem.price - elem.dis_price).toFixed(1)}`;
+        }
+        else{
+            DisPrice.innerText = 0;
+        }
+    })
+}
 
 
