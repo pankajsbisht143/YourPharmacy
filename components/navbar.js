@@ -19,7 +19,7 @@ let navbar=()=>{
                 <a href="Product.html">
                     <h3>Pharmacy</h3>
                 </a>
-                <a href="#">
+                <a href="">
                     <h3>Other Services</h3>
                 </a>
                 <span>
