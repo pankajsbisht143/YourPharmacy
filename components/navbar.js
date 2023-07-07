@@ -33,7 +33,7 @@ let navbar=()=>{
         </div>
         <div id="consultDiv">
             <a href="cart.html">
-                <p><ion-icon name="cart-outline"></ion-icon> <span id="count"></span></p>
+                <p><ion-icon name="cart-outline"></ion-icon> <span id="count">0</span></p>
             </a>
 
             <a href="signin.html">
