@@ -1,5 +1,6 @@
 let footer=()=>{
-    return `<div id="footImg">
+    return `
+    <div id="footImg">
     <img src="./images/png.png" alt="">
  </div>
  <div id="footer">
@@ -52,3 +53,8 @@ let footer=()=>{
  </div>`
 }
 export default footer;
+
+
+
+
+{/*  */}

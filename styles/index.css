@@ -2,8 +2,11 @@ body {
     /* width: 100%; */
     margin: 0;
     padding: 0;
+    /* overflow: auto; */
 }
-
+#count{
+    color: blue;
+}
 /* navbar start */
 #navbar1 {
     /* width: 100%; */
@@ -20,6 +23,7 @@ nav {
     /* gap: 230px; */
     align-items: center;
     padding: 0px 15px 0px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     /* border: 2px solid red; */
 }
 
@@ -155,7 +159,9 @@ nav {
 }
 
 /* navbar close  */
-
+#show-results-div{
+    visibility: hidden;
+}
 
 
 
@@ -333,6 +339,7 @@ margin: 40px 0;
 
 #doctorImg>button:hover {
     background-color: aqua;
+    color: black;
     cursor: pointer;
 }
 
@@ -677,11 +684,11 @@ main h1 {
     outline: none;
 }
 
-#expert>button {
+#expert>button{
     display: block;
     text-align: center;
     margin: auto;
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
     color: white;
     background-color: rgb(0, 81, 92);
     border-radius: 8px;
@@ -698,16 +705,30 @@ main h1 {
 
 
 /* .....footer start.... */
+/* #footerMain{
+    width: fit-content;
+    border: 1px solid green;
+    display: block;
+    margin: auto;
+} */
+#footImg{
+    width: 100%;
+    margin: auto;
+}
 #footImg>img{
     width: 100%;
+    margin: auto;
     margin-bottom: -10px;
     cursor: pointer;
+    
 }
 #footer{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    /* margin: auto; */
     background-color: black;
+    overflow: hidden;
 }
 #footme{
     width: 80%;
@@ -793,6 +814,7 @@ main h1 {
 
     #menubar p {
         font-size: 30px;
+       
     }
 
     /* nav{
@@ -1044,17 +1066,13 @@ main h1 {
 
     #menubar {
         display: block;
-        /* border: 1px solid green; */
         margin-right: 20px;
     }
 
     #menubar p {
         font-size: 30px;
+        /* float: right; */
     }
-
-    /* nav{
-        border:  4px solid yellow;
-    } */
     section {
         position: relative;
     }
@@ -1100,6 +1118,7 @@ main h1 {
 
     #close {
         font-size: 30px;
+        float: right;
     }
 
     /* navbar end */

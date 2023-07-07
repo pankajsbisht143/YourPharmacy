@@ -11,7 +11,7 @@ const userData = async function(){
 
 userData();
 
-let addressContainer = document.getElementById("main_addressContainer");
+let addressContainer = document.getElementById("add_here");
 function displayUserAddress(data){
    addressContainer.innerHTML = "";
    data.forEach(function(elem){
@@ -29,6 +29,8 @@ function displayUserAddress(data){
 
     var remove = document.createElement("button");
     remove.textContent = "REMOVE";
+    remove.setAttribute("id","changeAdd_btn");
+    remove.style = "margin-right: 23px;"
     remove.addEventListener("click",async function(){
         try{
           await fetch(`http://localhost:3000/address/${elem.id}`,{
@@ -51,3 +53,9 @@ function displayUserAddress(data){
     addressContainer.append(Main_div);
    });
 }
+
+let addAddress = document.getElementById("add_newAddress");
+
+addAddress.addEventListener("click",function(){
+    location.href = "form.html";
+})
