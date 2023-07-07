@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cart  Page</title>
+    <link rel="stylesheet" href="./styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
        body{
@@ -22,7 +23,7 @@
         .card2{
             /* margin: auto; */
             background-color: #a4cfee3b;
-            position: fixed;
+            position: sticky;
             left:60rem;
             /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -92,7 +93,9 @@
     </style>
   </head>
   <body>
-   
+   <div id="nav">
+
+   </div>
     <div id="liveAlertPlaceholder"></div>
    <div class="container" id="parent">
     <div class="input-group mb-3"style="width: 27rem;">
@@ -101,31 +104,6 @@
       </div>
     <div class="card" class="" id="main" >
         <div class="card card1" id="c_1">
-            <!-- <table class="table table-striped">
-                <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">items</th>
-                       <th scope="col">items</th>
-                      <th scope="col">Price</th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>img</td>
-                      <td>volinie</td>
-                      <td>200.00</td>
-                      <td id="updation"><button onclick="increment()">&#43;</button>
-                        <p>0</p>
-                        <button onclick="decrement()">&#8722;</button></td>
-                      <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                    </tr>
-                    
-                  </tbody>
-            </table> -->
         </div>
         <div class="card card2 fs-5" id="c_2" style="width: 25rem;">
             <div class="card-body">
@@ -141,8 +119,8 @@
               <div>
                 <p class="card-text mt-2">Promo Code</p>
                 <p class="card-text fw-bold mt-2" id="promo_html">#####</p>
-            </div>
-            <div>
+              </div>
+              <div>
                 <p class="card-text mt-2">Shiping</p>
                 <p class="card-text fw-bold mt-2">150</p>
             </div>
@@ -159,14 +137,17 @@
         </div>
     </div>
    </div>
+   <div id="footer">
+
+   </div>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script> 
-  <script type="module" src="./script/cart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   <script type="module" src="./script/cart.js"></script>
   </body>
 </html>
 <script>
-    let get_items = JSON.parse(localStorage.getItem("Cart"));
+  let get_items = JSON.parse(localStorage.getItem("Cart"));
     display(get_items)
     function display(get_items) {
       document.getElementById("c_1").innerHTML = ""
