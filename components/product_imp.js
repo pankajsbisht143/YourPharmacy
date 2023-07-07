@@ -20,6 +20,7 @@ const Display_Prod = (P_data,Container,url) => {
   
       var Title = document.createElement("h4");
       Title.setAttribute("class", "Title");
+      Title.style.color="#155a5f"
       Title.textContent = title;
   
       var P_Div = document.createElement("div");
@@ -67,6 +68,10 @@ const Display_Prod = (P_data,Container,url) => {
   // <--------------------------- Add to Cart ---------------------------->
   let Add_Cart=JSON.parse(localStorage.getItem("Cart"))||[];
 
+  // document.getElementById("count").textContent=Add_Cart.length;
+  // // console.log(Count)
+  // var count=document.getElementById("count")
+  // count.textContent=Add_Cart.length;
   function Add_to_Cart(img_url, Price, Price_off, title){
        var obj={
         img:img_url,
@@ -76,7 +81,10 @@ const Display_Prod = (P_data,Container,url) => {
        }
        console.log(obj)
        Add_Cart.push(obj);
+       
        localStorage.setItem("Cart",JSON.stringify(Add_Cart));
+       count.innerText=Add_Cart.length;
+       console.log(count)
   }
 
   // var Arr_obj=JSON.parse(localStorage.getItem("Product_Detail"))||[];

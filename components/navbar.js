@@ -29,11 +29,19 @@ let navbar=()=>{
             </div>
         </div>
         <div id="menubar">
+
+            <p id="open"><ion-icon name="menu-outline"></ion-icon></p>
+        </div>
+        <div id="consultDiv">
+            <a href="#">
+                <p><ion-icon name="cart-outline"></ion-icon><span id="count"></span></p>
+
             <p id="open"><ion-icon name="menu-outline"></ion-icon> </p>
         </div>
         <div id="consultDiv">
             <a href="cart.html">
-                <p><ion-icon name="cart-outline"></ion-icon> <span id="count">0</span></p>
+                <p><ion-icon name="cart-outline"></ion-icon> </p>
+
             </a>
 
             <a href="signin.html">
