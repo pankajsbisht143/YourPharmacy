@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cart  Page</title>
+    <link rel="stylesheet" href="./styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
+       body{
+        background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+      }
         #main{
             /* background-color: #fff; */
             display: grid;
@@ -18,9 +22,11 @@
         }
         .card2{
             /* margin: auto; */
-            background-color: #d1e7dd;
-            position: fixed;
-            left:60rem
+            background-color: #a4cfee3b;
+            position: sticky;
+            left:60rem;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
         }
         .card-body>div{
@@ -87,63 +93,40 @@
     </style>
   </head>
   <body>
-   
+   <div id="nav">
+
+   </div>
     <div id="liveAlertPlaceholder"></div>
    <div class="container" id="parent">
     <div class="input-group mb-3"style="width: 27rem;">
         <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
         <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
       </div>
-    <div class="" class="" id="main" >
+    <div class="card" class="" id="main" >
         <div class="card card1" id="c_1">
-            <!-- <table class="table table-striped">
-                <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">items</th>
-                       <th scope="col">items</th>
-                      <th scope="col">Price</th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>img</td>
-                      <td>volinie</td>
-                      <td>200.00</td>
-                      <td id="updation"><button onclick="increment()">&#43;</button>
-                        <p>0</p>
-                        <button onclick="decrement()">&#8722;</button></td>
-                      <td><button type="button" class="btn-close" aria-label="Close"></button></td>
-                    </tr>
-                    
-                  </tbody>
-            </table> -->
         </div>
-        <div class="card card2 fs-5" id="c_2" style="width: 25rem;" class="">
+        <div class="card card2 fs-5" id="c_2" style="width: 25rem;">
             <div class="card-body">
               <h5 class="card-title  fs-3">Summary</h5>
               <div>
                   <p class="card-text mt-2">Total Items</p>
-                  <p class="card-text mt-2" id="total_item">1</p>
+                  <p class="card-text mt-2 fw-bold" id="total_item">1</p>
               </div>
               <div>
                 <p class="card-text mt-2">order total</p>
-                <p class="card-text mt-2" id="order"></p>
+                <p class="card-text mt-2 fw-bold" id="order"></p>
             </div>
               <div>
                 <p class="card-text mt-2">Promo Code</p>
-                <p class="card-text mt-2" id="promo_html">#####</p>
-            </div>
-            <div>
+                <p class="card-text fw-bold mt-2" id="promo_html">#####</p>
+              </div>
+              <div>
                 <p class="card-text mt-2">Shiping</p>
-                <p class="card-text mt-2">150</p>
+                <p class="card-text fw-bold mt-2">150</p>
             </div>
                 <div class="card-footer mb-3">
-                    <p class="card-text fs-4"> <b>Total</b></p>
-                    <p class="card-text" id="total"></p>
+                    <p class="card-text fs-4"> <i>Total</i></p>
+                    <p class="card-text fw-bold" id="total"></p>
               </div>
             <div>
                 <a href="form.html" style="background-color: #00525d;" id="purchase" class="btn btn-primary d-block mx-auto">Purchase</a>
@@ -154,13 +137,17 @@
         </div>
     </div>
    </div>
+   <div id="footer">
+
+   </div>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script> 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   <script type="module" src="./script/cart.js"></script>
   </body>
 </html>
 <script>
-    let get_items = JSON.parse(localStorage.getItem("Cart"));
+  let get_items = JSON.parse(localStorage.getItem("Cart"));
     display(get_items)
     function display(get_items) {
       document.getElementById("c_1").innerHTML = ""
@@ -196,26 +183,35 @@
     let total = document.getElementById("total")
     let obj = {
       dis_price:0,
-      price:0
+      price:0,
 
     }
     // -------------------------------
     let global_order = 0
     let discountVal = 0;
-    let incre_cost = 0
-    let decre_cost = 0
     let set_arr = []
     let c = 1;
+    var ID;
     function increment(p) {
+       ID=p;
+       if(ID===p){
         c++;
+       }
+       else{
+        c=1;
+       }
+      let incre_cost = 0
+   
       document.getElementById("count"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
-        global_order += incre_cost
-        order.innerHTML = (global_order);
-        total.innerHTML = global_order+150
+      global_order += incre_cost
+      console.log(global_order , incre_cost);
+      order.innerHTML = (global_order);
+      total.innerHTML = global_order+150
     }
 
     function decrement(p) {
+      let decre_cost = 0
       if(c>1){
         c--;
         document.getElementById("count"+p).innerHTML = c;
@@ -229,7 +225,6 @@
 
     let total_item = document.getElementById("total_item")
     total_item.innerHTML = get_items.length;
-
     order_func(get_items)
     function order_func(arr) {
       let total_order = 0;
@@ -239,6 +234,7 @@
       global_order += total_order
       obj.price = total_order
       set_arr.push(obj)
+      order.innerHTML = ""
       order.innerHTML = (total_order);
       if(arr.length === 0){
         total.innerHTML = 0

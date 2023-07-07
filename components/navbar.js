@@ -10,16 +10,16 @@ let navbar=()=>{
             </div>
 
             <div id="nav1e">
-                <a href="#">
+                <a href="Product.html">
                     <h3>Medicines</h3>
                 </a>
                 <a href="#">
                     <h3>Doctor</h3>
                 </a>
-                <a href="#">
+                <a href="Product.html">
                     <h3>Pharmacy</h3>
                 </a>
-                <a href="#">
+                <a href="">
                     <h3>Other Services</h3>
                 </a>
                 <span>
@@ -29,15 +29,18 @@ let navbar=()=>{
             </div>
         </div>
         <div id="menubar">
-            <p id="open"><ion-icon name="menu-outline"></ion-icon> <span id="count"></span></p>
+
+            <p id="open"><ion-icon name="menu-outline"></ion-icon></p>
         </div>
+           
         <div id="consultDiv">
-            <a href="#">
-                <p><ion-icon name="cart-outline"></ion-icon></p>
+            <a href="cart.html">
+                <p><ion-icon name="cart-outline"></ion-icon><span id="count">0</span></p>
+
             </a>
 
-            <a href="#">
-                <p><ion-icon name="person-circle-outline"></ion-icon>Login</p>
+            <a href="signin.html">
+                <p ><ion-icon name="person-circle-outline"></ion-icon><span id="login"> Login </span></p>
             </a>
             <button id="Consult">Consult Now</button>
         </div>
@@ -49,19 +52,19 @@ let navbar=()=>{
         <p id="close"><ion-icon name="close-circle-outline"></ion-icon>
         </p>
         <div>
-            <a href="#">
+            <a href="Product.html">
                 <h1>Medicines</h1>
             </a>
             <a href="#">
                 <h1>Doctor</h1>
             </a>
-            <a href="#">
+            <a href="Product.html">
                 <h1>Pharmacy</h1>
             </a>
             <a href="#">
                 <h1>Other Services</h1>
             </a>
-            <a href="">
+            <a href="signin.html">
                 <p><ion-icon name="person-circle-outline"></ion-icon> Login</p>
             </a>
             <button>Consult Now</button>

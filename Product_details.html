@@ -10,24 +10,10 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <style>
-      #NR_Tag{
-        font-size: 20px;
-        color: #00525d;
-        font-weight: 600;
-      }
-
-      #Pr_Title{
-        font-size: 25px;
-        color: #00525d;
-        font-weight: 700;
-      }
-
-      #Mfg{
-        font-size: 20px;
-        color: #027a8a;
-        font-weight: 600;
-      }
+      
+    
 
       /* <--------------------Styling For Zoom */
       /* * {
@@ -116,7 +102,88 @@
     </style>
 </head>
 <body>
-    <div id="PD_main_Container">
+  <!-- Navbar Container -->
+  <header>
+    <nav>
+        <div id="navbar1">
+            <div>
+                <a href="">
+                    <img src="https://img.freepik.com/premium-vector/caduceus-symbol-made-using-bird-wings-poisonous-snakes-healthcare-conceptual-vector-illustration_570429-5842.jpg"
+                    alt="">
+                </a>
+            </div>
+
+            <div id="nav1e">
+                <a href="#">
+                    <h3>Medicines</h3>
+                </a>
+                <a href="#">
+                    <h3>Doctor</h3>
+                </a>
+                <a href="#">
+                    <h3>Pharmacy</h3>
+                </a>
+                <a href="#">
+                    <h3>Other Services</h3>
+                </a>
+                <!-- <span>
+                    <input type="text" placeholder="Search" id="Search">
+                    <button id="btn1"><ion-icon name="search-outline"></ion-icon></button>
+                </span> -->
+            </div>
+        </div>
+        <div id="menubar">
+            <p id="open"><ion-icon name="menu-outline"></ion-icon> <span id="count"></span></p>
+        </div>
+        <div id="consultDiv">
+            <a href="#">
+                <p><ion-icon name="cart-outline"></ion-icon></p>
+            </a>
+
+            <a href="#">
+                <p><ion-icon name="person-circle-outline"></ion-icon>Login</p>
+            </a>
+            <button id="Consult">Consult Now</button>
+        </div>
+
+    </nav>
+</header>
+<section>
+    <!-- <div id="menunavbar">
+        <p id="close"><ion-icon name="close-circle-outline"></ion-icon>
+        </p>
+        <div>
+            <a href="#">
+                <h1>Medicines</h1>
+            </a>
+            <a href="#">
+                <h1>Doctor</h1>
+            </a>
+            <a href="#">
+                <h1>Pharmacy</h1>
+            </a>
+            <a href="#">
+                <h1>Other Services</h1>
+            </a>
+            <a href="">
+                <p><ion-icon name="person-circle-outline"></ion-icon> Login</p>
+            </a>
+            <button>Consult Now</button>
+        </div>
+    </div> -->
+</section>
+  <div id="Pop_up">
+    <div id="POP_Top">
+    <h1 style="text-align: left;">
+      Hi! :)</h1>
+      <h1><i class="fa-solid fa-xmark" id="Close_pop"></i></h1>  
+    </div>
+    <h5>Allow us to serve you better by entering your delivery pincode below.</h5>
+    <input id="Enter_Pin" type="text" placeholder="Enter pincode here">
+    <br>
+    <button id="Sub_Pin">Submit</button>
+  </div>
+  <div id="PD_main_Container">
         <div id="PD_Left">
             <div id="PD_Tag">
                 <i class="fa-solid fa-arrow-trend-up"></i>
@@ -217,17 +284,17 @@
         </div>
          <div id="PD_Right">
           <div>
-            <h3>Price :<span id="PD_Price">0</span></h3>
-            <h4 id="MRP" style="padding: 10px;">0</h4>
-            <h4 id="Discount">0</h4>
+            <h3 id="PD_Price">0</h3>
+            <h5 id="MRP" style="padding: 10px;">0</h5>
+            <h5 id="Discount">0</h5>
           </div>
-         <div>
+         <div id="Show_PC">
           <i class="fa-solid fa-location-dot" style="padding: 0px 10px 10px;"></i>
-          <h5>Delivery to Pincode-<span>0</span></h5>
+          <h5 style="color: #00516b; font-weight: 600;">Delivery to Pincode-<span id="PIN">_ _ _</span></h5>
          </div>
          <div>
           <img src="https://images.apollo247.in/images/expressIcon.png" >
-          <h5>Within 4 hours</h5>
+          <h5 style="color: #00516b; font-weight: 600;">Within 4 hours</h5>
          </div>
          <div>
          <select id="Qty">
@@ -243,10 +310,64 @@
           <option value="10">10 Qty</option>
          </select>
         </div>
-         <div>
+         <div id="BTN">
          <button id="ATC_PD">ADD TO CART</button>
         </div>
          </div>
+    </div>
+    <!-- Footer -->
+    <div id="footMain">
+      <div id="footImg">
+        <img src="./images/png.png" alt="">
+     </div>
+     <div id="footer">
+      <div id="foot">
+       <div>
+         <h2>All Medicine</h2>
+         <div>
+         <h3>Health&Care</h3>
+         <p>Beauty Care</p>
+     </div>
+       </div>
+       <div>
+         <h2>Doctors</h2>
+         <div>
+         <h3>Physiotherapy</h3>
+         <p>Heart Specialist</p>
+     </div>
+       </div>
+       <div>
+         <h2>Hospital</h2>
+         <div>
+         <h3>Government listed</h3>
+         <p>Top private</p>
+     </div>
+       </div>
+       <div>
+         <h2>About Us</h2>
+         <div>
+         <h3>Contact Us</h3>
+         
+     </div>
+       </div>
+       <div></div>
+      </div>
+      <!-- <div id="hr">
+    
+      </div> -->
+     <hr>
+      <div id="footme">
+    
+         <div>
+          <p>@YourPharmacy 2023 All rights reserved.</p>
+         </div>
+         <div>
+             <img src="./images/appleplay.png" alt="">
+             <img src="./images/googleplay.png" alt="">
+         </div>
+      </div>
+    
+     </div>
     </div>
 </body>
 </html>
@@ -266,6 +387,7 @@
 	</script>
 	<script type="text/javascript">
 
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36251023-1']);
   _gaq.push(['_setDomainName', 'jqueryscript.net']);
@@ -278,3 +400,5 @@
   })();
 
 </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
