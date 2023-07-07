@@ -36,7 +36,7 @@ const Random_Fetch = async () => {
       Nex.disabled = false;
     }
 
-    let P_Resp = await fetch(`http://localhost:3000/Random?_page=${page}&_limit=15`);
+    let P_Resp = await fetch(`https://muddy-slacks-tick.cyclic.app/Random?_page=${page}&_limit=15`);
     let P_Data = await P_Resp.json();
 
 
@@ -90,7 +90,7 @@ async function fetch_Supp(){
           Nex.disabled = false;
         }
     
-        let Su_Resp = await fetch(`http://localhost:3000/Suppliment?_page=${page}&_limit=15`);
+        let Su_Resp = await fetch(`https://muddy-slacks-tick.cyclic.app/Suppliment?_page=${page}&_limit=15`);
         let Su_Data = await Su_Resp.json();
     
         total_page = Math.ceil(Su_Resp.headers.get('X-Total-Count') / 15);
@@ -124,7 +124,7 @@ async function Eye_C(){
           Nex.disabled = false;
         }
     
-        let EC_Resp = await fetch(`http://localhost:3000/Eye Care?_page=${page}&_limit=15`);
+        let EC_Resp = await fetch(`hhttps://muddy-slacks-tick.cyclic.app/Eye Care?_page=${page}&_limit=15`);
         let EC_Data = await EC_Resp.json();
     
         total_page = Math.ceil(EC_Resp.headers.get('X-Total-Count') / 15);
@@ -158,7 +158,7 @@ Fetch_Brand()
 async function Fetch_Brand() {
     // let city = document.getElementById("typesearch").value;
     //  console.log(city);
-    let res = await fetch(`http://localhost:3000/Brand`)
+    let res = await fetch(`https://muddy-slacks-tick.cyclic.app/Brand`)
     let data = await res.json();
     console.log(data)
     display_Brand(data);
@@ -168,7 +168,8 @@ async function Fetch_Brand() {
 async function Debouncing(){
    let city_name=document.getElementById("B_Search").value;
   //  console.log(city);
-  let res=await fetch(`http://localhost:3000/Brand?q=${city_name}`)
+  // https://muddy-slacks-tick.cyclic.app/Random
+  let res=await fetch(`https://muddy-slacks-tick.cyclic.app/Brand?q=${city_name}`)
   let data=await res.json();
   
   console.log(data);
@@ -209,7 +210,7 @@ async function Search_Brand(query){
       Nex.disabled = false;
     }
 
-    let P_Resp = await fetch(`http://localhost:3000/Random?_page=${page}&_limit=15&q=${query}`);
+    let P_Resp = await fetch(`https://muddy-slacks-tick.cyclic.app/Random?_page=${page}&_limit=15&q=${query}`);
     let P_Data = await P_Resp.json();
 
     total_page = Math.ceil(P_Resp.headers.get('X-Total-Count') / 15);
