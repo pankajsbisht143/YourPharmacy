@@ -257,7 +257,9 @@
     gap: 50px;
 
 }
-
+#count{
+    background-color: black;
+}
 nav {
     /* width: 100%; */
     /* position: fixed; */
