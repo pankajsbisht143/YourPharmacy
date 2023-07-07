@@ -119,3 +119,10 @@ document.getElementById('sub').addEventListener("click",()=>{
   
 })
 
+let user=JSON.parse(localStorage.getItem("username"));
+
+if(user){
+  document.getElementById('login').textContent=user;
+}else{
+  document.getElementById('login').textContent="Login";
+}
