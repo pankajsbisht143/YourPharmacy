@@ -4,9 +4,9 @@ body {
     padding: 0;
     /* overflow: auto; */
 }
-#count{
+/* #count{
     color: blue;
-}
+} */
 /* navbar start */
 #navbar1 {
     /* width: 100%; */
@@ -124,6 +124,8 @@ nav {
     width: 38px;
     font-size: 18px;
 }
+
+
 
 #navbar1>div span input {
     border-radius: 7px 0px 0px 7px;

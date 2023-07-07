@@ -1,23 +1,24 @@
 // import Display_Prod from "../components/product_imp.js";
-// // import navbar from "../components/navbar.js"
+
+// import navbar from "../components/navbar.js"
 
 // // import footer from "../components/footer.js"
 
 // // let FootC=document.getElementById("footMain");
 // //  FootC.innerHTML=footer();
 
-// // let Nav_Cont=document.getElementById("Nav");
-// //  Nav_Cont.innerHTML=navbar();
+// let Nav_Cont=document.getElementById("Nav");
+// Nav_Cont.innerHTML=navbar();
 
 
 var Arr_PD=JSON.parse(localStorage.getItem("Product_Detail"));
 
-var Arr=[];
-Arr.push(Arr_PD)
-Display_PD(Arr)
-console.log(Arr)
+// var Arr=[];
+// Arr.push(Arr_PD)
+Display_PD(Arr_PD)
+// console.log(Arr)
 
-function Display_PD(){
+function Display_PD(Arr){
    Arr.map(({img_url, Price, Price_off,MFG,title,title_sh,img1,img2,img3,img4,Prod_Detail,Key_Ingredient,Key_Benifit})=>{
 
 

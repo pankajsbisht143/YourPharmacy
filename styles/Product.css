@@ -248,6 +248,37 @@
     outline: none;
 }
 
+/* <--------------------- POP For Add to cart-----------------------> */
+#Pop_up{
+    width: 500px;
+    /* border: 1px solid red;
+    height: 340px; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: hidden;
+    /* display: none; */
+    transition: transform 0.4s,top 0.4s;
+    text-align: center;
+    padding: 20px 30px;
+    background-color:#ffffff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+    color: rgb(14, 8, 8);
+     color: #00525d; 
+  }
+
+
+  
+  #POP_Top{
+    display: flex;
+    /* border: 2px solid; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  /* ----------------------- END POP Functionality-------------------- */
 
 
 /* navbar start */
@@ -314,9 +345,7 @@ nav {
 }
 
 header {
-
     position: relative;
-
 }
 
 nav {
