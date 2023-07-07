@@ -18,6 +18,12 @@ function displayUserAddress(data){
     var Main_div = document.createElement("div");
     Main_div.setAttribute("id","add_div_here");
 
+    Main_div.addEventListener("click",function(){
+        // myFun();
+        this.style.border = "2px solid black";
+        localStorage.setItem("myID",elem.id);
+    })
+
     var userName = document.createElement("h3");
     userName.textContent = elem.firstName+" "+elem.lastName;
 
@@ -59,3 +65,35 @@ let addAddress = document.getElementById("add_newAddress");
 addAddress.addEventListener("click",function(){
     location.href = "form.html";
 })
+
+
+
+
+// payment method with Rayjor-Pay here
+
+// var options = {
+//     "key": "rzp_test_xkkA99Z3D9jiWf", // //Enter the Key ID generated from the Dashboard
+//     "amount": 100*100, // //Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+//     "currency": "INR",
+//     "name": "Your Pharmeasy",
+//     "description": "Test Payment",
+//     "image": "https://img.freepik.com/premium-vector/caduceus-symbol-made-using-bird-wings-poisonous-snakes-healthcare-conceptual-vector-illustration_570429-5842.jpg",
+//     // //"order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+//     // // "account_id": "acc_Ef7ArAsdU5t0XL",
+//     "handler": function (response){
+//        // // alert(response.razorpay_payment_id);
+//       //  // alert(response.razorpay_order_id);
+//        // // alert(response.razorpay_signature);
+//     }
+// };
+// var rzp1 = new Razorpay(options);
+// document.getElementById('payment_btn').onclick = function(e){
+//     rzp1.open();
+//     e.preventDefault();
+// }
+
+// document.getElementById('payment_btn'){
+//     location.href = "./overview.html";
+// }
+
+
