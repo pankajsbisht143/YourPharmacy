@@ -1,6 +1,6 @@
 const userData = async function(){
     try{
-    let res = await fetch(" http://localhost:3000/address");
+    let res = await fetch("https://muddy-slacks-tick.cyclic.app/address");
     let data = await res.json();
     displayUserAddress(data);
     }
@@ -39,7 +39,7 @@ function displayUserAddress(data){
     remove.style = "margin-right: 23px;"
     remove.addEventListener("click",async function(){
         try{
-          await fetch(`http://localhost:3000/address/${elem.id}`,{
+          await fetch(`https://muddy-slacks-tick.cyclic.app/address/${elem.id}`,{
             method : "DELETE",
           });
         }
