@@ -91,3 +91,31 @@ let fetchFunction=async()=>{
 document.getElementById("btn1").addEventListener('click',()=>{
   window.location.href="Product.html"
 })
+
+
+var sc=document.getElementById('footerMain')
+document.getElementById('moreabout').addEventListener('click',()=>{
+  sc.scrollIntoView();
+})
+
+
+document.getElementById('sub').addEventListener("click",()=>{
+  var select=document.getElementById("select").value;
+  var sel=document.getElementById("sel").value;
+  var name=document.getElementById("name").value;
+  var email=document.getElementById("email").value;
+  var number=document.getElementById("phone").value;
+  var date=document.getElementById("date").value;
+  
+
+  
+
+  if((name==""||email==""||number==""||date=="")){
+      alert('Please fill all required fields')
+      return;
+  }
+    alert(`${name} Meeting has be successfuly booked,You will recieve a call from the expert`)
+  
+  
+})
+
