@@ -189,20 +189,29 @@
     // -------------------------------
     let global_order = 0
     let discountVal = 0;
-    let incre_cost = 0
-    let decre_cost = 0
     let set_arr = []
     let c = 1;
+    var ID;
     function increment(p) {
+       ID=p;
+       if(ID===p){
         c++;
+       }
+       else{
+        c=1;
+       }
+      let incre_cost = 0
+   
       document.getElementById("count"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
-        global_order += incre_cost
-        order.innerHTML = (global_order);
-        total.innerHTML = global_order+150
+      global_order += incre_cost
+      console.log(global_order , incre_cost);
+      order.innerHTML = (global_order);
+      total.innerHTML = global_order+150
     }
 
     function decrement(p) {
+      let decre_cost = 0
       if(c>1){
         c--;
         document.getElementById("count"+p).innerHTML = c;
@@ -216,7 +225,6 @@
 
     let total_item = document.getElementById("total_item")
     total_item.innerHTML = get_items.length;
-
     order_func(get_items)
     function order_func(arr) {
       let total_order = 0;
@@ -226,6 +234,7 @@
       global_order += total_order
       obj.price = total_order
       set_arr.push(obj)
+      order.innerHTML = ""
       order.innerHTML = (total_order);
       if(arr.length === 0){
         total.innerHTML = 0
