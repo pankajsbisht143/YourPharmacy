@@ -40,7 +40,7 @@ const addPost = async ()=>{
         locality : locality    
     }
 
-   let response = await fetch("http://localhost:3000/address",{
+   let response = await fetch("https://muddy-slacks-tick.cyclic.app/address",{
     method:"POST",
     body: JSON.stringify(address_Obj),
     headers:{

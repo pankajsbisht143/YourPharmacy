@@ -3,7 +3,7 @@ let myArray = [];
 
 const myFun = async function(){
     try{
-     let result = await fetch(`http://localhost:3000/address/${userID}`);
+     let result = await fetch(`https://muddy-slacks-tick.cyclic.app/address/${userID}`);
      let mydata = await result.json();
      myArray.push(mydata)
      displayMydata(myArray);
