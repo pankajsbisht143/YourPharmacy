@@ -40,7 +40,7 @@ let navbar=()=>{
             </a>
 
             <a href="signin.html">
-                <p><ion-icon name="person-circle-outline"></ion-icon>Login</p>
+                <p ><ion-icon name="person-circle-outline"></ion-icon><span id="login"> Login </span></p>
             </a>
             <button id="Consult">Consult Now</button>
         </div>
