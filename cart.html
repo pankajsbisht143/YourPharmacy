@@ -15,6 +15,159 @@
        body{
         background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
       }
+      #navbar1 {
+    /* width: 100%; */
+    display: flex;
+    gap: 50px;
+
+}
+
+nav {
+    /* width: 100%; */
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    /* gap: 230px; */
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+
+#navbar1>div>a>img {
+    width: 80px;
+    height: 60px;
+}
+
+#nav1e {
+    /* width: 100%; */
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+#nav1e>a {
+    text-decoration: none;
+    color: rgb(0, 81, 92);
+}
+
+#nav1e>a:hover {
+    color: rgb(240, 134, 53);
+}
+
+#menubar {
+    display: none;
+}
+
+#consultDiv {
+    width: 23%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding-right: 15px;
+
+}
+
+#consultDiv p {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+
+header {
+
+    position: relative;
+
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    padding-right: 25px;
+    background-color: white;
+    align-items: center;
+    z-index: 2;
+}
+
+#consultDiv>a {
+    text-decoration: none;
+    color: rgb(0, 81, 92);
+    font-size: bold;
+}
+
+#consultDiv>a:hover {
+    color: rgb(240, 134, 53);
+}
+
+#Search {
+    width: 12rem;
+    height: 40px;
+    padding: 5px;
+
+}
+
+#Search:focus {
+    outline: none;
+}
+
+/* #Search:hover{
+    background-color: crimson;
+} */
+
+#navbar1>div span {
+    display: flex;
+}
+
+#navbar1>div span button {
+    margin-left: -5px;
+    padding: 3.3px;
+    border-radius: 0 7px 7px 0;
+    background-color: rgb(0, 81, 92);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(0, 81, 92);
+    width: 38px;
+    font-size: 18px;
+}
+
+
+
+#navbar1>div span input {
+    border-radius: 7px 0px 0px 7px;
+    border: 1px solid rgb(0, 81, 92);
+}
+
+#navbar1>div span button:hover {
+    background-color: rgb(240, 134, 53);
+    border: 1px solid rgb(240, 134, 53);
+    color: black;
+}
+
+#Consult {
+    width: 150px;
+    height: 40px;
+    /* border-radius: 8px; */
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 81, 92);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    /* font-weight: bold; */
+}
+
+#Consult:hover {
+    background-color: rgb(240, 134, 53);
+    color: black;
+}
+
+#menunavbar {
+    display: none;
+}
         #main{
             /* background-color: #fff; */
             display: grid;
@@ -94,8 +247,9 @@
         }
 
 
-              /* Additional mobile styles... */
+
     }
+    
     </style>
   </head>
   <body>
@@ -150,14 +304,17 @@
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script> 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    <script type="module" src="./script/cart.js"></script>
   </body>
 </html>
 <script>
-  
-  let get_items = JSON.parse(localStorage.getItem("Cart")) || [];
-  function display(get_items) {
-   document.getElementById("c_1").innerHTML = " ";
+
+  let get_items = JSON.parse(localStorage.getItem("Cart"));
+    display(get_items)
+    function display(get_items) {
+      document.getElementById("c_1").innerHTML = ""
       get_items.forEach((e,i) => {
         // console.log(i);
         let div1 = document.createElement("div");
@@ -170,7 +327,7 @@
                 <td>${e.title}</td>
                 <td>${e.Price}₹</td>
                 <td id=""><button onclick="increment(${i})">&#43;</button></td>
-                <td><p id="count${i}">1</p></td>
+                <td><p id="count_cart${i}">1</p></td>
                 <td id=""><button onclick="decrement(${i})">&#8722;</button></td>
                 <td><button type="button" onclick="del(get_items,${i})" class="btn-close" aria-label="Close"></button></td>
                 </tr>
@@ -204,7 +361,7 @@
     function increment(p) {
       let incre_cost = 0
       c++;
-      document.getElementById("count"+p).innerHTML = c;
+      document.getElementById("count_cart"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
       global_order += incre_cost
       console.log(global_order , incre_cost);
@@ -216,7 +373,7 @@
       let decre_cost = 0
       if(c>1){
         c--;
-        document.getElementById("count"+p).innerHTML = c;
+        document.getElementById("count_cart"+p).innerHTML = c;
         decre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
         global_order -= decre_cost
         order.innerHTML = (global_order);
@@ -224,9 +381,10 @@
       }
     }
     
-
+// ----------------------------------------------------------------------------------
     let total_item = document.getElementById("total_item")
     total_item.innerHTML = get_items.length;
+
     order_func(get_items)
     function order_func(arr) {
       let total_order = 0;
