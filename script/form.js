@@ -1,3 +1,12 @@
+import navbar from "../components/navbar.js"
+import footer from "../components/footer.js"
+
+let Over_V_nav=document.getElementById("Form_Navabr");
+Over_V_nav.innerHTML=navbar()
+
+let Over_V_Foot=document.getElementById("Form_Footer");
+Over_V_Foot.innerHTML=footer()
+
 let create_btn = document.getElementById("submit");
 
 create_btn.addEventListener("click",()=>{
@@ -40,7 +49,7 @@ const addPost = async ()=>{
         locality : locality    
     }
 
-   let response = await fetch("https://muddy-slacks-tick.cyclic.app/address",{
+   let response = await fetch("http://localhost:3000/address",{
     method:"POST",
     body: JSON.stringify(address_Obj),
     headers:{
@@ -49,7 +58,7 @@ const addPost = async ()=>{
    });
 
    let data = await response.json();
-   location.href = "address.html"
+   location.href = "./address.html"
    console.log(data);
 
     }
@@ -57,3 +66,9 @@ const addPost = async ()=>{
         console.log(err);
     }
 }
+
+let add_btn =  document.getElementById("submit");
+
+add_btn.addEventListener("click",function(){
+    location.href = "./address.html";
+})

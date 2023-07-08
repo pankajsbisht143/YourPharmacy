@@ -1,3 +1,26 @@
 {
-
+  "address": [
+    {
+      "firstName": "Ashutosh",
+      "lastName": "Kumawat",
+      "number": "536",
+      "pincode": "634563",
+      "address": "6345",
+      "city": "Lucknow",
+      "state": "Rajasthan",
+      "locality": "lucknow",
+      "id": 11
+    },
+    {
+      "firstName": "Saif",
+      "lastName": "Khan",
+      "number": "8745736853",
+      "pincode": "345345",
+      "address": "pune",
+      "city": "sikar",
+      "state": "raj",
+      "locality": "ringas",
+      "id": 12
+    }
+  ]
 }

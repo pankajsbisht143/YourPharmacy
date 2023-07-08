@@ -1,9 +1,19 @@
+import navbar from "../components/navbar.js"
+import footer from "../components/footer.js"
+
+let Over_V_nav=document.getElementById("Ovew_v_Navbar");
+Over_V_nav.innerHTML=navbar()
+
+let Over_V_Foot=document.getElementById("Ovew_v_Footer");
+Over_V_Foot.innerHTML=footer()
+
+
 let userID = localStorage.getItem("myID");
 let myArray = [];
 
 const myFun = async function(){
     try{
-     let result = await fetch(`https://muddy-slacks-tick.cyclic.app/address/${userID}`);
+     let result = await fetch(`http://localhost:3000/address/${userID}`);
      let mydata = await result.json();
      myArray.push(mydata)
      displayMydata(myArray);
@@ -91,5 +101,32 @@ function displayPrices(data){
     })
 }
 
+var finalPrice = JSON.parse(localStorage.getItem("prices"));
+
+var last_price =  finalPrice[0].dis_price ;
+
+
+// payment method with Rayjor-Pay here
+
+var options = {
+    "key": "rzp_test_xkkA99Z3D9jiWf", // //Enter the Key ID generated from the Dashboard
+    "amount": last_price*100, // //Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Your Pharmeasy",
+    "description": "Test Payment",
+    "image": "https://img.freepik.com/premium-vector/caduceus-symbol-made-using-bird-wings-poisonous-snakes-healthcare-conceptual-vector-illustration_570429-5842.jpg",
+    // //"order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+    // // "account_id": "acc_Ef7ArAsdU5t0XL",
+    "handler": function (response){
+       // // alert(response.razorpay_payment_id);
+      //  // alert(response.razorpay_order_id);
+       // // alert(response.razorpay_signature);
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('payment_btn').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
 
 
