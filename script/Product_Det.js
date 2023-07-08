@@ -79,7 +79,7 @@ document.getElementById("count").textContent=Add_Cart.length;
 
 function Add_on_cart(img_url, Price, Price_off, title){
 	 var obj={
-	  img:img_url,
+		img_url:img_url,
 	  Price:Price,
 	  Price_off:Price_off,
 	  title:title
