@@ -366,3 +366,9 @@ function Closed_p_up(){
   POPUP_Cl.style.visibility="hidden"
 }
 
+// <-----------------------------------
+if(user){
+  document.getElementById('login').textContent=user;
+}else{
+  document.getElementById('login').textContent="Login";
+}

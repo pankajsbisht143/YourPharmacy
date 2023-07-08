@@ -202,3 +202,10 @@ function Closed_POP(){
 	SAC.style.visibility="hidden";
 	// document.getElementById("PD_main_Container").style.filter="none"
 }
+
+// <---------------------------
+if(user){
+	document.getElementById('login').textContent=user;
+  }else{
+	document.getElementById('login').textContent="Login";
+  }
