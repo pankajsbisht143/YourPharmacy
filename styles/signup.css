@@ -71,7 +71,7 @@ margin: auto;
   padding: 0 0  0 10px;
 }
 form input:focus{
-  outline: none;
+  outline: solid #b4e3f8;
 }
 
 #google,#microsoft{
