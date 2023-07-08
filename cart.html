@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
+      #navbar1>div span input {
+            border-radius: 7px 0px 0px 7px;
+            border: 1px solid rgb(0, 81, 92);
+            padding: 15px;
+        }
        body{
         background-image: url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
       }
@@ -178,6 +183,7 @@ nav {
             background-color: #a4cfee3b;
             position: sticky;
             left:60rem;
+            height: fit-content;
             /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
@@ -252,10 +258,7 @@ nav {
    </div>
     <div id="liveAlertPlaceholder"></div>
    <div class="container" id="parent">
-    <div class="input-group mb-3"style="width: 27rem;">
-        <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
-        <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
-      </div>
+    
     <div class="card" class="" id="main" >
         <div class="card card1" id="c_1">
         </div>
@@ -290,6 +293,10 @@ nav {
             </div>
         </div>
     </div>
+    <div class="input-group mt-3"style="width: 27rem;">
+     <button style="background-color: #00525d;" class="btn btn-success" type="button" id="liveAlertBtn">Apply</button>
+     <input type="text" class="form-control" placeholder="add promocode" id="promo_input" aria-label="Example text with button addon" aria-describedby="button-addon1">
+   </div>
    </div>
    <div id="footer">
 
@@ -303,12 +310,20 @@ nav {
   </body>
 </html>
 <script>
+
   let get_items = JSON.parse(localStorage.getItem("Cart"));
  
     display(get_items)
     function display(get_items) {
       document.getElementById("c_1").innerHTML = ""
+
+  
+  let get_items = JSON.parse(localStorage.getItem("Cart")) || [];
+  function display(get_items) {
+   document.getElementById("c_1").innerHTML = " ";
+
       get_items.forEach((e,i) => {
+        // console.log(i);
         let div1 = document.createElement("div");
         div1.innerHTML = `<table class="table table-hover">
           <tbody>
@@ -323,9 +338,10 @@ nav {
                 <td id=""><button onclick="decrement(${i})">&#8722;</button></td>
                 <td><button type="button" onclick="del(get_items,${i})" class="btn-close" aria-label="Close"></button></td>
                 </tr>
-                
+              
                 </tbody>
                 </table>`
+                
                 document.getElementById("c_1").append(div1)
                 // console.log(e,i);
                 // document.getElementById(`del-${i}`).addEventListener("click", () => {
@@ -335,6 +351,7 @@ nav {
       });
       
     }
+    display(get_items)
     
     let order = document.getElementById("order")
     let total = document.getElementById("total")
@@ -348,17 +365,9 @@ nav {
     let discountVal = 0;
     let set_arr = []
     let c = 1;
-    var ID;
     function increment(p) {
-       ID=p;
-       if(ID===p){
-        c++;
-       }
-       else{
-        c=1;
-       }
       let incre_cost = 0
-   
+      c++;
       document.getElementById("count"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
       global_order += incre_cost
@@ -437,8 +446,8 @@ nav {
 
 
     function del(arr,i) {
+      arr.splice(i,1);
       console.log(arr,i);
-        arr.splice(i,1);
         localStorage.setItem("Cart" , JSON.stringify(arr));
        let r = JSON.parse(localStorage.getItem("Cart"))
       display(r)
