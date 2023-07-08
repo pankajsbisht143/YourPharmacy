@@ -249,7 +249,14 @@ body{
     font-weight: 700;
     color: #00525d; 
   }
+  /* .................................... Navbar & Footer-------------------------------- */
 
+  
+  *{
+    margin: 0px;
+  }
+
+  
 
   #navbar1 {
     /* width: 100%; */
@@ -267,6 +274,7 @@ nav {
     align-items: center;
     padding: 0px 15px 0px 15px;
     /* border: 2px solid red; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #navbar1>div>a>img {
@@ -314,6 +322,7 @@ nav {
 header {
 
     position: relative;
+    
 
 }
 
@@ -324,6 +333,7 @@ nav {
     padding-right: 25px;
     background-color: white;
     z-index: 2;
+
 }
 
 #consultDiv>a {
