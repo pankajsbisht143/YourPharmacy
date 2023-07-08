@@ -78,14 +78,25 @@ changeBtn.addEventListener("click",async function(){
        }
       });
 
+      location.href = "./address.html"
+
        }
        catch(err){
            console.log(err);
        }
 })
 
-let change_btn = document.getElementById("change_btn");
+// let change_btn = document.getElementById("change_btn");
 
-change_btn.addEventListener("click",function(){
-    location.href = "./address.html";
-})
+// change_btn.addEventListener("click",function(){
+//     location.href = "./address.html";
+// })
+
+
+
+
+if(user){
+    document.getElementById('login').textContent=user;
+  }else{
+    document.getElementById('login').textContent="Login";
+  }
