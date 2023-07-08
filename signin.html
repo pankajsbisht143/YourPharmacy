@@ -79,7 +79,7 @@
         console.log(user);
         document.querySelector("#error").style.display="none";
         document.querySelector("#logout").style.display="block";
-        alert("Login Successfully");
+        alert("Congratulations!, Sign In Successfully");
         location.href="./index.html"
         
         // ...
@@ -115,7 +115,7 @@ document.querySelector("#google").addEventListener("click",()=>{
     // The signed-in user info.
     const user = result.user;
     console.log(user);
-    alert("Signin Successfully");
+    alert("Congratulations!, Sign In Successfully");
     document.querySelector("#logout").style.display="block";
     document.querySelector("#logout").innerText=`Logout ${user.displayName}`
     location.href="./index.html"
