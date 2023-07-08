@@ -104,7 +104,7 @@ function displayPrices(data){
 var finalPrice = JSON.parse(localStorage.getItem("prices"));
 
 var last_price =  finalPrice[0].dis_price ;
-
+console.log(last_price);
 
 // payment method with Rayjor-Pay here
 

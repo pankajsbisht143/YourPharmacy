@@ -49,7 +49,7 @@ const addPost = async ()=>{
         locality : locality    
     }
 
-   let response = await fetch("http://localhost:3000/address",{
+   let response = await fetch(" http://localhost:3000/address",{
     method:"POST",
     body: JSON.stringify(address_Obj),
     headers:{
@@ -69,6 +69,6 @@ const addPost = async ()=>{
 
 let add_btn =  document.getElementById("submit");
 
-add_btn.addEventListener("click",function(){
-    location.href = "./address.html";
-})
+// add_btn.addEventListener("click",function(){
+//     location.href = "./address.html";
+// })
