@@ -1171,6 +1171,7 @@
       "locality": "mumbai",
       "id": 9
     },
+
     {
       "firstName": "Virat",
       "lastName": "kohli",
@@ -1181,18 +1182,10 @@
       "state": "Mumbai",
       "locality": "ringas",
       "id": 10
-    },
-    {
-      "firstName": "Virat",
-      "lastName": "kohli",
-      "number": "93759863485",
-      "pincode": "35345",
-      "address": "353",
-      "city": "Bandra",
-      "state": "Mumbai",
-      "locality": "ringas",
-      "id": 11
+      
     }
+
+  
   ]
 
 }

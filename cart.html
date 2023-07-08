@@ -247,7 +247,7 @@ nav {
         }
 
 
-              /* Additional mobile styles... */
+
     }
     
     </style>
@@ -310,10 +310,12 @@ nav {
   </body>
 </html>
 <script>
-  
-  let get_items = JSON.parse(localStorage.getItem("Cart")) || [];
-  function display(get_items) {
-   document.getElementById("c_1").innerHTML = " ";
+
+  let get_items = JSON.parse(localStorage.getItem("Cart"));
+
+    display(get_items)
+    function display(get_items) {
+      document.getElementById("c_1").innerHTML = ""
       get_items.forEach((e,i) => {
         // console.log(i);
         let div1 = document.createElement("div");
@@ -326,7 +328,7 @@ nav {
                 <td>${e.title}</td>
                 <td>${e.Price}₹</td>
                 <td id=""><button onclick="increment(${i})">&#43;</button></td>
-                <td><p id="count${i}">1</p></td>
+                <td><p id="count_cart${i}">1</p></td>
                 <td id=""><button onclick="decrement(${i})">&#8722;</button></td>
                 <td><button type="button" onclick="del(get_items,${i})" class="btn-close" aria-label="Close"></button></td>
                 </tr>
@@ -360,7 +362,7 @@ nav {
     function increment(p) {
       let incre_cost = 0
       c++;
-      document.getElementById("count"+p).innerHTML = c;
+      document.getElementById("count_cart"+p).innerHTML = c;
       incre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
       global_order += incre_cost
       console.log(global_order , incre_cost);
@@ -372,7 +374,7 @@ nav {
       let decre_cost = 0
       if(c>1){
         c--;
-        document.getElementById("count"+p).innerHTML = c;
+        document.getElementById("count_cart"+p).innerHTML = c;
         decre_cost+=parseFloat(get_items[p].Price.replace("₹" , ""));
         global_order -= decre_cost
         order.innerHTML = (global_order);
@@ -380,9 +382,10 @@ nav {
       }
     }
     
-
+// ----------------------------------------------------------------------------------
     let total_item = document.getElementById("total_item")
     total_item.innerHTML = get_items.length;
+
     order_func(get_items)
     function order_func(arr) {
       let total_order = 0;

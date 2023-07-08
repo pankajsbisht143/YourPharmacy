@@ -1,6 +1,15 @@
+import navbar from "../components/navbar.js"
+import footer from "../components/footer.js"
+
+let Over_V_nav=document.getElementById("Add_v_Navbar");
+Over_V_nav.innerHTML=navbar()
+
+let Over_V_Foot=document.getElementById("Add_v_Footer");
+Over_V_Foot.innerHTML=footer()
+
 const userData = async function(){
     try{
-    let res = await fetch("https://muddy-slacks-tick.cyclic.app/address");
+    let res = await fetch("http://localhost:3000/address");
     let data = await res.json();
     displayUserAddress(data);
     }
@@ -39,7 +48,7 @@ function displayUserAddress(data){
     remove.style = "margin-right: 23px;"
     remove.addEventListener("click",async function(){
         try{
-          await fetch(`https://muddy-slacks-tick.cyclic.app/address/${elem.id}`,{
+          await fetch(`http://localhost:3000/address/${elem.id}`,{
             method : "DELETE",
           });
         }
