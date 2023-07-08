@@ -1,8 +1,18 @@
+import navbar from "../components/navbar.js"
+import footer from "../components/footer.js"
+
+let Over_V_nav=document.getElementById("Edit_v_Navbar");
+Over_V_nav.innerHTML=navbar()
+
+let Over_V_Foot=document.getElementById("Edit_v_Footer");
+Over_V_Foot.innerHTML=footer()
+
+
 let user_addressID = localStorage.getItem("addressID");
 
 const userData = async function(){
     try{
-       let res = await fetch(`https://muddy-slacks-tick.cyclic.app/address/${user_addressID}`);
+       let res = await fetch(`http://localhost:3000/address/${user_addressID}`);
        let data = await res.json();
 
        let {firstName,lastName,number,pincode,address,city,state,locality} = data;
@@ -60,16 +70,22 @@ changeBtn.addEventListener("click",async function(){
            locality : locality    
        }
    
-      await fetch(`https://muddy-slacks-tick.cyclic.app/address/${user_addressID}`,{
+      await fetch(`http://localhost:3000/address/${user_addressID}`,{
        method:"PATCH",
        body: JSON.stringify(new_obj),
        headers:{
            "Content-Type" : "application/json"
        }
       });
-      location.href = "address.html"
+
        }
        catch(err){
            console.log(err);
        }
+})
+
+let change_btn = document.getElementById("change_btn");
+
+change_btn.addEventListener("click",function(){
+    location.href = "./address.html";
 })
