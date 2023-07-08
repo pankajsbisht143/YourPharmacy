@@ -247,7 +247,7 @@ nav {
         }
 
 
-              /* Additional mobile styles... */
+
     }
     
     </style>
@@ -316,12 +316,6 @@ nav {
     display(get_items)
     function display(get_items) {
       document.getElementById("c_1").innerHTML = ""
-
-  
-  let get_items = JSON.parse(localStorage.getItem("Cart")) || [];
-  function display(get_items) {
-   document.getElementById("c_1").innerHTML = " ";
-
       get_items.forEach((e,i) => {
         // console.log(i);
         let div1 = document.createElement("div");
