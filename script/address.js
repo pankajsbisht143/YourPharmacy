@@ -139,3 +139,11 @@ function displayPrices(data){
 }
 
 
+
+if(user){
+    document.getElementById('login').textContent=user;
+  }else{
+    document.getElementById('login').textContent="Login";
+  }
+
+

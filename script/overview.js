@@ -103,7 +103,7 @@ function displayPrices(data){
 
 var finalPrice = JSON.parse(localStorage.getItem("prices"));
 
-var last_price =  finalPrice[0].dis_price ;
+var last_price =  finalPrice[0].price;
 console.log(last_price);
 
 // payment method with Rayjor-Pay here
@@ -130,3 +130,9 @@ document.getElementById('payment_btn').onclick = function(e){
 }
 
 
+
+if(user){
+    document.getElementById('login').textContent=user;
+  }else{
+    document.getElementById('login').textContent="Login";
+  }

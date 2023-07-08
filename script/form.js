@@ -67,8 +67,16 @@ const addPost = async ()=>{
     }
 }
 
-let add_btn =  document.getElementById("submit");
+// let add_btn =  document.getElementById("submit");
 
 // add_btn.addEventListener("click",function(){
 //     location.href = "./address.html";
 // })
+
+
+
+if(user){
+    document.getElementById('login').textContent=user;
+  }else{
+    document.getElementById('login').textContent="Login";
+  }
