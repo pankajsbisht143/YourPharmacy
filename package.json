@@ -2,9 +2,10 @@
   "name": "yourpharmacy",
   "version": "1.0.0",
   "description": "Login/SignUp -Ashish,     \r HomePage-Pankaj,  \r Product page/Product Description Page-Tushar,  \r CartPage-Saif,  \r Adrress /payment Page-Ashutosh",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pankajsbisht143/YourPharmacy/issues"
   },
-  "homepage": "https://github.com/pankajsbisht143/YourPharmacy#readme"
+  "homepage": "https://github.com/pankajsbisht143/YourPharmacy#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
 }

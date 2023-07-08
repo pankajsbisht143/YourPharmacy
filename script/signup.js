@@ -42,7 +42,7 @@ document.querySelector("#signup").addEventListener("click", () => {
         document.querySelector("#error").style.display="none";
         document.querySelector("#success").style.display="block";
         localStorage.setItem("username",JSON.stringify(username));
-        alert("Register successfully");
+        alert("Congratulations!, Register Successfully");
         location.href = "signin.html";
         // ...
     })
@@ -67,7 +67,7 @@ document.querySelector("#google").addEventListener("click", () => {
       const user = result.user;
       console.log(user);
       localStorage.setItem("username",user.displayName);
-      alert("Signup Successfully");
+      alert("Congratulations!, Register Successfully");
       location.href = "./index.html";
       // IdP data available using getAdditionalUserInfo(result)
       // ...

@@ -61,7 +61,7 @@ function Display_PD(Arr){
 	 var Off=Math.round((Price/Price_off)*100);
 
 	 var Disc=document.getElementById("Discount");
-	 Disc.textContent=`${Off}%OFF`
+	 Disc.textContent=`${100-Off}%OFF`
 	 Disc.style.color="#23b28d"
 	 Disc.style.fontWeight="600"
 
@@ -76,6 +76,9 @@ function Display_PD(Arr){
 
 
 let Add_Cart=JSON.parse(localStorage.getItem("Cart"))||[];
+// function Product_Count(Add_Cart){
+// 	document.getElementById("count").textContent=Add_Cart.length;
+//   }
 
 function Add_on_cart(img_url, Price, Price_off, title){
 	 var obj={

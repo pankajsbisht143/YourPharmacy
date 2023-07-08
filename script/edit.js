@@ -2,7 +2,7 @@ let user_addressID = localStorage.getItem("addressID");
 
 const userData = async function(){
     try{
-       let res = await fetch(`http://localhost:3000/address/${user_addressID}`);
+       let res = await fetch(`https://muddy-slacks-tick.cyclic.app/address/${user_addressID}`);
        let data = await res.json();
 
        let {firstName,lastName,number,pincode,address,city,state,locality} = data;
@@ -60,7 +60,7 @@ changeBtn.addEventListener("click",async function(){
            locality : locality    
        }
    
-      await fetch(`http://localhost:3000/address/${user_addressID}`,{
+      await fetch(`https://muddy-slacks-tick.cyclic.app/address/${user_addressID}`,{
        method:"PATCH",
        body: JSON.stringify(new_obj),
        headers:{

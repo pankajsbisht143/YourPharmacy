@@ -3,7 +3,7 @@ let myArray = [];
 
 const myFun = async function(){
     try{
-     let result = await fetch(`http://localhost:3000/address/${userID}`);
+     let result = await fetch(`https://muddy-slacks-tick.cyclic.app/address/${userID}`);
      let mydata = await result.json();
      myArray.push(mydata)
      displayMydata(myArray);
@@ -53,6 +53,7 @@ function displayMyPro(data){
     prod_DIV.innerHTML = "";
     data.forEach(function(elem){
         let mypro_Div = document.createElement("div");
+        mypro_Div.setAttribute("class","given_img");
         let myImage = document.createElement("img");
         myImage.src = elem.img;
         let myTitle = document.createElement("p");
@@ -79,10 +80,10 @@ function displayPrices(data){
         }else{
             TAPrice.innerText = elem.price;
         }
-
+        
         let DisPrice = document.getElementById("myID2");
-        if(elem.price>elem.dis_price){
-            DisPrice.innerText = `-${elem.price - elem.dis_price}`;
+        if(0<elem.dis_price){
+            DisPrice.innerText = `-${(elem.price - elem.dis_price).toFixed(1)}`;
         }
         else{
             DisPrice.innerText = 0;

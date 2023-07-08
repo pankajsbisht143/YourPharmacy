@@ -1,7 +1,8 @@
+
 #main_containerDIV{
   display: grid;
   grid-template-columns: 60% 25%;
-  width: 90%;
+  width: 70%;
   margin: auto;
   margin-top: 90px;
 }
@@ -16,7 +17,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 input[type=text], select {
   width: 100%;
-  padding: 19px 13px;
+  padding: 10px ;
   margin: 16px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -45,7 +46,7 @@ input[type=submit]:hover {
 }
 input[type=number]{
   width: 100%;
-  padding: 19px 13px;
+  padding: 10px;
   margin: 16px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -75,16 +76,18 @@ label{
 
 #payment_DIV{
   /* border: 2px solid black; */
-  width: 100%;
-  margin-left: 57px;
-  padding: 11px 47px 74px 30px;
+  width: 30%;
+  /* margin-left: 30px;
+  padding: 11px 47px 74px 30px; */
   height: fit-content;
   border-radius: 10px;
   margin-top: 15px;
   /* background-color: #f2f2f2; */
    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
-
+#payment_DIV>img{
+width: 600px;
+}
 /* #tp_div{
 display: flex;
 justify-content: space-between;
@@ -125,4 +128,3 @@ font-size: 30px;
 margin-top: 16px;
 margin-left: -30px;
 }
-
