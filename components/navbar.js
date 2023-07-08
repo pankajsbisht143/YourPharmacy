@@ -3,7 +3,7 @@ let navbar=()=>{
     <nav>
         <div id="navbar1">
             <div>
-                <a href="">
+                <a href="index.html">
                     <img src="https://img.freepik.com/premium-vector/caduceus-symbol-made-using-bird-wings-poisonous-snakes-healthcare-conceptual-vector-illustration_570429-5842.jpg"
                     alt="">
                 </a>
