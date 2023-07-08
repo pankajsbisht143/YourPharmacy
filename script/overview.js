@@ -65,7 +65,7 @@ function displayMyPro(data){
         let mypro_Div = document.createElement("div");
         mypro_Div.setAttribute("class","given_img");
         let myImage = document.createElement("img");
-        myImage.src = elem.img;
+        myImage.src = elem.img_url;
         let myTitle = document.createElement("p");
         myTitle.innerText = elem.title;
 
