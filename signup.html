@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/signup.css" />
   </head>
   <body>
-    <form action="">
+    <form action="" onsubmit={handleSubmit}>
       <h1 style="margin-top: 0px;">Hello, Friend! <br> Happy to see you</h1>
       <div id="inputbox">
         <input id="username" type="text" placeholder="Name" />
@@ -51,7 +51,11 @@
     </form>
   </body>
 </html>
-<script type="module" src="./script/signup.js"></script>
+<script type="module" src="./script/signup.js">
+  function handleSubmit(e){
+    e.preventDefault();
+  }
+</script>
 
 
 <!-- <div id="inputbox">

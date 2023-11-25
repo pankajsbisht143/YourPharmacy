@@ -63,8 +63,8 @@ let navbar=()=>{
             <a href="#">
                 <h1>Other Services</h1>
             </a>
-            <a href="signin.html">
-                <p><ion-icon name="person-circle-outline"></ion-icon> Login</p>
+            <a href="./signup.html">
+                <p><ion-icon name="person-circle-outline"></ion-icon> Signup</p>
             </a>
             <button>Consult Now</button>
         </div>

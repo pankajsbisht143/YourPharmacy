@@ -176,7 +176,7 @@ async function Debouncing(){
   display_Brand(data);
 
  }
-
+   
 function display_Brand(Arr){
 var Show_city=document.querySelector("#citynames");
 Show_city.innerHTML=""
@@ -194,8 +194,8 @@ Arr.map(({Brand_name})=>{
 Show_city.append(p,line);
 })
 }
-
-
+   
+   
 async function Search_Brand(query){
   try {
     if (page == 1) {
