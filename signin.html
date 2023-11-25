@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/signin.css">
   </head>
   <body>
-    <form action="">
+    <form action="" onclick=(handleSubmit)>
       <h1>Welcome!</h1>
       <!-- <p>Enter your personal details <br> & start journy with us.</p> -->
       <button id="logout" style="display: none;">Logout<i class="fa-solid fa-envelope"></i></button>
@@ -43,6 +43,9 @@
 </body>
 </html>
 <script type="module">
+  function handleSubmit(e){
+    e.preventDefault();
+  }
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
   import {

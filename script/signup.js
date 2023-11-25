@@ -38,7 +38,9 @@ document.querySelector("#signup").addEventListener("click", () => {
       event.preventDefault()
       // Signed in
         const user = userCredential.user;
-        console.log(user);
+       let data= JSON.parse(localStorage.getItem("username")) || [];
+       data=[];
+        console.log(data);
         document.querySelector("#error").style.display="none";
         document.querySelector("#success").style.display="block";
         localStorage.setItem("username",JSON.stringify(username));
